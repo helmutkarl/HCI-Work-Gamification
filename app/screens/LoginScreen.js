@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native';
+
 import BackgroundComponent from '../components/background.js';
+import colors from '../config/colors.js'
 
 function LoginScreen(props) {
     return (
@@ -26,7 +28,7 @@ const styles = StyleSheet.create({
     loginButton: {
         width: '100%',
         height: 75,
-        backgroundColor: '#fc5c65'
+        backgroundColor: colors.primary
     }
 })
 
