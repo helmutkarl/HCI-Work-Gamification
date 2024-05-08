@@ -50,10 +50,11 @@ export default function App() {
         <Tab.Screen name="Courses" component={CourseCatalogueScreen} options={{
           tabBarIcon: ({ focused, size }) => (
             <Image
-              source={focused ? require('./app/assets/icons/menu_rocket_full.png') : require('./app/assets/icons/menu_rocket_full.png')}
+              source={focused ? require('./app/assets/icons/menu_rocket_full.png') : require('./app/assets/icons/menu_rocket_empty.png')}
               style={{ width: size, height: size }}
             />
-          )
+          ),
+          headerShown: false,
         }} />
         <Tab.Screen name="Leaderboard" component={LeaderboardScreen} options={{
           tabBarIcon: ({ focused, size }) => (
@@ -61,7 +62,8 @@ export default function App() {
               source={focused ? require('./app/assets/icons/menu_trophy_full.png') : require('./app/assets/icons/menu_trophy_empty.png')}
               style={{ width: size, height: size }}
             />
-          )
+          ),
+          headerShown: false,
         }} />
         <Tab.Screen name="Rewards" component={RewardsScreen} options={{
           tabBarIcon: ({ focused, size }) => (
@@ -69,7 +71,8 @@ export default function App() {
               source={focused ? require('./app/assets/icons/menu_shield_full.png') : require('./app/assets/icons/menu_shield_empty.png')}
               style={{ width: size, height: size }}
             />
-          )
+          ),
+          headerShown: false,
         }} />
         <Tab.Screen name="Profile" component={ProfileScreen} options={{
           tabBarIcon: ({ focused, size }) => (
@@ -77,7 +80,8 @@ export default function App() {
               source={focused ? require('./app/assets/icons/menu_user_full.png') : require('./app/assets/icons/menu_user_empty.png')}
               style={{ width: size, height: size }}
             />
-          )
+          ),
+          headerShown: false,
         }} />
       </Tab.Navigator>
     </NavigationContainer>
