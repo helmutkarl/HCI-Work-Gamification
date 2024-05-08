@@ -14,7 +14,10 @@ Gerät(e), auf dem(denen) getestet wurde:
 [Pixel2, iPhone 8 etc.]
 
 Externe Libraries und Frameworks:
-[@react-navigation/bottom-tabs, @react-navigation/native-stack]
+@react-navigation/bottom-tabs
+@react-navigation/native-stack
+@react-native-async-storage/async-storage
+react-native-app-intro-slider
 
 Dauer der Entwicklung:
 [XX Stunden]
