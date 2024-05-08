@@ -24,9 +24,17 @@ const ProfileScreen = () => {
                         <Text style={styles.tagsText}>525 XP</Text>
                     </View>
                     <View style={styles.tags}>
+                        <Image
+                            source={require('../assets/icons/trophy.png')} 
+                            style={[styles.image, { marginRight: 4 }]}
+                            resizeMode="contain"/>
                         <Text style={styles.tagsText}>4th</Text>
                     </View>
                     <View style={styles.tags}>
+                        <Image
+                            source={require('../assets/icons/clock.png')} 
+                            style={[styles.image, { marginRight: 4 }]}
+                            resizeMode="contain"/>
                         <Text style={styles.tagsText}>36h</Text>
                     </View>
                 </View>
