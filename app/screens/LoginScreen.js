@@ -1,24 +1,33 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView, TouchableOpacity, Text } from 'react-native';
+import { StyleSheet, View, ScrollView, TouchableOpacity, Text , ImageBackground } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import BackgroundComponent from '../components/background.js';
+
 import colors from '../config/colors.js'
+import background from '../assets/images/background.png'
 
 function LoginScreen(props) {
     return (
-        <ScrollView showsVerticalScrollIndicator={false}>
-            <View style={styles.container}>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Sign In</Text>
-                    <Icon name='keyboard-arrow-right' size={24} color={colors.white} />
-                </TouchableOpacity>
-            </View>
-        </ScrollView>
+        <ImageBackground       
+                source={background}
+                style={styles.backgroundContainer}>
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={styles.container}>
+                    <TouchableOpacity style={styles.button}>
+                        <Text style={styles.buttonText}>Sign In</Text>
+                        <Icon name='keyboard-arrow-right' size={24} color={colors.white} />
+                    </TouchableOpacity>
+                </View>
+            </ScrollView>
+        </ImageBackground>
     );
 }
 
 const styles = StyleSheet.create({
+    backgroundContainer: {
+        flex: 1,
+        resizeMode: 'cover',
+    },
     container: {
         flex: 1,
         backgroundColor: '#fff',

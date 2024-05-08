@@ -1,22 +1,30 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView, TouchableOpacity, Text } from 'react-native';
+import { StyleSheet, View, ScrollView, TouchableOpacity, Text , ImageBackground } from 'react-native';
 
-import BackgroundComponent from '../components/background.js';
+
 import colors from '../config/colors.js'
+import background from '../assets/images/background.png'
 
 
 const CourseCatalogueScreen = () => {
     return (
-        <View style={styles.titleContainer}>
-            <Text style={styles.titleText}>Course Catalogue</Text>
-            <Text style={styles.subTitleText}>Explore all our trainings here!</Text>
-        </View>
-       
-
+        <ImageBackground       
+                source={background}
+                style={styles.backgroundContainer}>
+            <View style={styles.titleContainer}>
+                <Text style={styles.titleText}>Course Catalogue</Text>
+                <Text style={styles.subTitleText}>Explore all our trainings here!</Text>
+            </View>
+        </ImageBackground>     
     );
 }
 
 const styles = StyleSheet.create({
+    backgroundContainer: {
+        flex: 1,
+        resizeMode: 'cover',
+    },
+
     titleContainer: {
         marginTop: 50,
         paddingHorizontal: 10,
