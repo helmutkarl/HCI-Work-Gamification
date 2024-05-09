@@ -45,7 +45,7 @@ const CourseCatalogueScreen = (navigation) => {
                     onPress = {() => navigation.navigate('CourseDetailScreen', {})}>
                         <Image                             
                             source={require('../assets/images/course_image_excel_small.png')} 
-                            style={[styles.image, { marginRight: 4 }]}
+                            style={[styles.image, { marginRight: -6 }]}
                             resizeMode="contain"/>
                             <View>
                                 <Text style={styles.courseCategory}>e-Learning</Text>
@@ -84,7 +84,7 @@ const CourseCatalogueScreen = (navigation) => {
                     onPress = {() => navigation.navigate('CourseDetailScreen', {})}>
                         <Image                             
                             source={require('../assets/images/course_image_excel_small.png')} 
-                            style={[styles.image, { marginRight: 4 }]}
+                            style={[styles.image, { marginRight: -6 }]}
                             resizeMode="contain"/>
                             <View>
                                 <Text style={styles.courseCategory}>e-Learning</Text>
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     courseSubTitle: {
         color: colors.titles,
         fontSize: 14,
-        marginLeft: 8,
+        left: 8,
         fontWeight: '500',
     },
 
