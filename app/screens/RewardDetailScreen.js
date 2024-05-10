@@ -1,16 +1,19 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView, TouchableOpacity, Text , ImageBackground } from 'react-native';
+import { StyleSheet, View, ScrollView, Text , ImageBackground } from 'react-native';
 
 import colors from '../config/colors.js'
 import background from '../assets/images/background.png'
 
-const RewardDetailScreen = () => {
+const RewardDetailScreen = ({route}) => {
+    const {itemId, imageUrl} = route.params;
+
     return (
         <ImageBackground       
                 source={background}
                 style={styles.backgroundContainer}>
-            <View>
-                <Text>RewardDetailScreen</Text>
+            <View style={styles.container}>
+            <Text>Item ID: {itemId}</Text>
+            <Image source={imageUrl} style={styles.image} />
             </View>
         </ImageBackground>
     );

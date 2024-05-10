@@ -10,9 +10,11 @@ import LeaderboardScreen from './app/screens/LeaderboardScreen';
 import RewardsScreen from './app/screens/RewardsScreen';
 import ProfileScreen from './app/screens/ProfileScreen';
 import IntroScreen from './app/screens/IntroScreen';
+import RewardDetailScreen from './app/screens/RewardDetailScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
+const DetailStack = createStackNavigator();
 
 function MainNavigator() {
   return (
@@ -35,7 +37,7 @@ function MainNavigator() {
         ),
         headerShown: false,
       }} />
-      <Tab.Screen name="Rewards" component={RewardsScreen} options={{
+      <Tab.Screen name="Rewards" component={DetailNavigator} options={{
         tabBarIcon: ({ focused, size }) => (
           <Image
             source={focused ? require('./app/assets/icons/menu_shield_full.png') : require('./app/assets/icons/menu_shield_empty.png')}
@@ -97,4 +99,25 @@ function AppNavigator() {
   );
 }
 
-export default AppNavigator;
+
+
+function DetailNavigator() {
+  return (
+      <DetailStack.Navigator screenOptions={{ headerShown: false }}>
+            <DetailStack.Screen name="RewardsScreen" component={RewardsScreen} />
+            <DetailStack.Screen 
+              name="RewardDetailScreen" 
+              component={RewardDetailScreen}
+              options= {{
+                headerShadowVisible: false,
+                headerBackVisible: false,
+                headerLeft: () => (
+                  <Image source={require('./app/assets/icons/button_back.png')} style={{ width: 20, height: 20, marginTop: 20 }} />
+                  ),
+              }}
+               />
+      </DetailStack.Navigator>
+  );
+}
+
+export default AppNavigator; DetailNavigator;
