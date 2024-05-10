@@ -6,5 +6,4 @@ export default {
     text: '#202244',
     black: '#000',
     white: '#fff'
-
 }
