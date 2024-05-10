@@ -14,12 +14,12 @@ const slides = [
     {
         key: 'two',
         icon: require('../assets/icons/menu_trophy_empty.png'),
-        text: 'Collect XP and make it to the top of the leaderboard!'
+        text: 'Collect XPs and make it to the top of the leaderboard!'
     },
     {
         key: 'three',
         icon: require('../assets/icons/menu_shield_empty.png'),
-        text: 'Unlock Rewards by completing trainings and collecting XP!'
+        text: 'Unlock Rewards by completing trainings and collecting XPs!'
     },
     {
         key: 'four',
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
         width: 20,
         height: 10,
         borderRadius: 5,
-        marginHorizontal: 3
+        marginHorizontal: 3,
     },
     buttonImage: {
         height: 64,
