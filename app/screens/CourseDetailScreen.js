@@ -5,7 +5,7 @@ import { StyleSheet, View, ScrollView, TouchableOpacity, Text , ImageBackground 
 import colors from '../config/colors.js'
 import background from '../assets/images/background.png'
 
-const CourseDetailScreen = (navigation) => {
+const CourseDetailScreen = (route) => {
     return (
         <ImageBackground       
                 source={background}

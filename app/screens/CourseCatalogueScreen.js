@@ -3,6 +3,8 @@ import { StyleSheet, View, ScrollView, TouchableOpacity, Text , ImageBackground,
 import { React, useState , useEffect} from "react";
 
 
+//Course images need to imported in same size and bigger//
+
 import colors from '../config/colors.js'
 import background from '../assets/images/background.png'
 

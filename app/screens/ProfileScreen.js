@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, View, ScrollView, TouchableOpacity, Text , ImageBackground , Image} from 'react-native';
 import { Platform } from 'react-native';
 
+//Images need to be imported in a bigger size!!!
+
 
 import colors from '../config/colors.js'
 import background from '../assets/images/background.png'
@@ -15,7 +17,7 @@ const ProfileScreen = () => {
                 <View style={styles.profileImageContainer}>
                     <Image
                         source={require('../assets/images/profile_image.png')} 
-                        style={styles.image}
+                        style={{ width: 220, height: 220,}}
                         resizeMode="contain" 
                     />
                 </View>

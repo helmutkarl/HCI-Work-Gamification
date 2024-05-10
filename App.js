@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Image } from 'react-native';
+import { Image , TouchableOpacity} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -14,7 +14,7 @@ import RewardDetailScreen from './app/screens/RewardDetailScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
-const DetailStack = createStackNavigator();
+const RewardStack = createStackNavigator();
 
 function MainNavigator() {
   return (
@@ -37,7 +37,7 @@ function MainNavigator() {
         ),
         headerShown: false,
       }} />
-      <Tab.Screen name="Rewards" component={DetailNavigator} options={{
+      <Tab.Screen name="Rewards" component={RewardStackNavigator} options={{
         tabBarIcon: ({ focused, size }) => (
           <Image
             source={focused ? require('./app/assets/icons/menu_shield_full.png') : require('./app/assets/icons/menu_shield_empty.png')}
@@ -101,23 +101,30 @@ function AppNavigator() {
 
 
 
-function DetailNavigator() {
+function RewardStackNavigator() {
   return (
-      <DetailStack.Navigator screenOptions={{ headerShown: false }}>
-            <DetailStack.Screen name="RewardsScreen" component={RewardsScreen} />
-            <DetailStack.Screen 
+      <RewardStack.Navigator>
+            <RewardStack.Screen name="RewardsScreen" component={RewardsScreen} options={{headerShown: false}} />
+            <RewardStack.Screen 
               name="RewardDetailScreen" 
               component={RewardDetailScreen}
-              options= {{
-                headerShadowVisible: false,
-                headerBackVisible: false,
-                headerLeft: () => (
-                  <Image source={require('./app/assets/icons/button_back.png')} style={{ width: 20, height: 20, marginTop: 20 }} />
-                  ),
-              }}
+              options={({ navigation }) => ({
+                headerBackTitleVisible: false,
+                headerTransparent: true,
+                headerTitle: '',
+                headerLeft: () => <CustomBackButton onPress={() => navigation.goBack()}/>,
+              })}
                />
-      </DetailStack.Navigator>
+      </RewardStack.Navigator>
   );
 }
 
-export default AppNavigator; DetailNavigator;
+const CustomBackButton = ({ onPress }) => {
+  return (
+    <TouchableOpacity onPress={onPress}>
+     <Image source={require('./app/assets/icons/button_back.png')} style={{ width: 30, height: 30, marginTop: 20, marginLeft: 20 }} />
+    </TouchableOpacity>
+  );
+};
+
+export default AppNavigator; RewardStackNavigator;
