@@ -17,6 +17,13 @@ export default RewardDetailScreen = ({ route }) => {
                 <View style={styles.imageContainer}>
                     <Image source={{ uri: imageUrl }} style={{ width: 260, height: 260, marginRight: 10 }} />
                 </View>
+                {itemAcquired &&(
+                    <View style={styles.tagContainer}>
+                        <View style={styles.tags}>
+                            <Text style={styles.tagsText}>acquired</Text>
+                        </View>
+                    </View>
+                )}
                 <View style={styles.titleContainer}>
                     <Text style={styles.titleText}>{itemName}</Text>
                     <Text style={styles.subTitleText}>{itemXp} XP</Text>

@@ -31,6 +31,33 @@ export default StyleSheet.create({
         alignItems: 'left,'
     },
 
+    tagContainer: {
+        marginLeft: 13,
+        flexDirection: 'row',
+        alignItems: 'left',
+        justifyContent: 'left',
+    },
+
+    tags: {
+        margin: 5,
+        paddingHorizontal: 18,
+        paddingVertical: 5,
+        borderRadius: 15,
+        elevation: 5,
+        shadowRadius: 12,
+        overflow: "hidden",
+        backgroundColor: '#f8f7d8',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: "center",
+    },
+
+    tagsText: {
+        color: colors.secondary,
+        fontSize: 14,
+        fontWeight: '700'
+    },
+
     titleText: {
         color: colors.titles,
         fontSize: 32,
