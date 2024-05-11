@@ -1,0 +1,21 @@
+[
+    {
+        "id": 100001,
+        "name": "Nicole Mayr",
+        "role": "Talent Manager",
+        "image": "https://drive.google.com/uc?export=view&id=12u9cFJUSXJ6h-GQ1Pq0nj7j23xWUREBv",
+        "xp": 525,
+        "placement": 4,
+        "timeSpent": 36,
+        "courses": [
+            {
+                "id": 1,
+                "status": "In Progress"
+            },
+            {
+                "id": 2,
+                "status": "In Progress"
+            }
+        ]
+    }
+]
