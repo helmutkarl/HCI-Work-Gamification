@@ -15,7 +15,7 @@ export default RewardDetailScreen = ({ route }) => {
             style={styles.backgroundContainer}>
             <ScrollView>
                 <View style={styles.imageContainer}>
-                    <Image source={imageUrl} style={{ width: 260, height: 260, marginRight: 10 }} />
+                    <Image source={{ uri: imageUrl }} style={{ width: 260, height: 260, marginRight: 10 }} />
                 </View>
                 <View style={styles.titleContainer}>
                     <Text style={styles.titleText}>{itemName}</Text>
@@ -31,7 +31,9 @@ export default RewardDetailScreen = ({ route }) => {
                         <Text style={styles.benefitsText}>50 Euro Amazon gift card</Text>
                     </View>
                 </View>
+                {itemAcquired &&(
                 <CtaButton onPress={() => { console.log("Benefits Claimed") }} />
+                )}
             </ScrollView>
         </ImageBackground>
     );
@@ -40,7 +42,8 @@ export default RewardDetailScreen = ({ route }) => {
 const CtaButton = ({ onPress }) => {
     return (
         <TouchableOpacity style={styles.ctaContainer}>
-            <Image source={require('../assets/images/cta.png')} style={{ width: 350, }} resizeMode='contain' />
+            <Image source={require('../assets/icons/cta_button.png')} style={{ width: 350, }} resizeMode='contain' />
+            <Text style={styles.ctaText}>Claim your benefits</Text>
         </TouchableOpacity>
     );
 };

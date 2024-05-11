@@ -19,8 +19,8 @@ export default StyleSheet.create({
         marginTop: 25,
         //backgroundColor: colors.primary,
         alignItems: 'center',
+        position: 'relative',
     },
-
 
     titleContainer: {
         paddingHorizontal: 10,
@@ -43,6 +43,7 @@ export default StyleSheet.create({
         marginTop: 8,
         fontWeight: '500',
     },
+
     descriptionText: {
         color: colors.text,
         fontSize: 16,
@@ -74,9 +75,14 @@ export default StyleSheet.create({
         fontWeight: '500',
     },
 
-    cta: {
+    ctaText: {
         color: colors.white,
-        fontSize: 18,
+        fontSize: 16,
         fontWeight: '900',
+        textAlign: 'center',
+        position: 'absolute',
+        top: '36%',
+       // left: '50%',
+       // transform: [{ translateX: -85}, { translateY: -15 }],
     },
 });
