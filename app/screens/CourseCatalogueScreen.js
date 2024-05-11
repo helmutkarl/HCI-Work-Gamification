@@ -11,18 +11,6 @@ import background from '../assets/images/background.png';
 export default CourseCatalogueScreen = ({ navigation }) => {
     const [searchString, setSearchString] = useState('');
 
-    const renderItem = ({ item }) => {
-        const handlePress = () => {
-            navigation.navigate('CourseDetailScreen', {
-                imageUrl: item.image,
-                itemName: item.name,
-                itemStatus: item.status,
-                itemCategory: item.category,
-                itemType: item.type,
-                itemSubtitle: item.subtitle,
-            });
-        };
-    }
 
     return (
         <ImageBackground source={background} style={styles.backgroundContainer}>
