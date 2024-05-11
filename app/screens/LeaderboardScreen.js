@@ -64,6 +64,18 @@ export default LeaderboardScreen = () => {
                         <Text style={styles.position}>Talent Manager</Text>
                     </View>
                 </View>
+                <View style={styles.leadersContainer}>
+                    <Text style={styles.rankContainer}>5</Text>
+                    <Image
+                        source={require('../assets/images/person_image_4.png')}
+                        style={[styles.image, { marginRight: 4 }]}
+                        resizeMode="contain" />
+                    <View>
+                        <Text style={styles.xps}>400 XP</Text>
+                        <Text style={styles.name}>Stefan Holzinger</Text>
+                        <Text style={styles.position}>Public Relations</Text>
+                    </View>
+                </View>
             </ScrollView>
         </ImageBackground>
     );
