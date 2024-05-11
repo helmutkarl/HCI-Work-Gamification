@@ -8,7 +8,7 @@ export default StyleSheet.create({
         justifyContent: 'center'
     },
     container: {
-        padding: '10%'
+        padding: '10%',
     },
     icon: {
         width: 164,

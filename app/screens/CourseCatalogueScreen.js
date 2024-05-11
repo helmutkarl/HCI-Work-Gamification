@@ -5,6 +5,7 @@ import { React, useState, useEffect } from "react";
 
 import CourseCard from '../components/CourseCard';
 import styles from '../styles/CourseCatalogueScreen.styles';
+import global from '../styles/global.styles.js';
 import coursesData from '../data/courses.json';
 import background from '../assets/images/background.png';
 
@@ -23,7 +24,7 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                 style={styles.textInput}
                 placeholder="Search for...">
             </TextInput>
-            <ScrollView>
+            <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false}>
                 {coursesData.map((course, index) => (
                     <CourseCard
                         key={index}
@@ -34,6 +35,7 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                         onPress={() => navigation.navigate('CourseDetailScreen', { image: imageURL })}
                     />
                 ))}
+                <View style={{ height: 64 }}></View>
             </ScrollView>
         </ImageBackground>
     );

@@ -3,6 +3,7 @@ import { View, ScrollView, Text, ImageBackground, Image, TouchableOpacity } from
 
 import background from '../assets/images/background.png'
 import styles from '../styles/RewardDetailScreen.styles.js';
+import global from '../styles/global.styles.js';
 
 
 export default RewardDetailScreen = ({ route }) => {
@@ -12,11 +13,11 @@ export default RewardDetailScreen = ({ route }) => {
         <ImageBackground
             source={background}
             style={styles.backgroundContainer}>
-            <ScrollView>
+            <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false}>
                 <View style={styles.imageContainer}>
                     <Image source={{ uri: imageUrl }} style={{ width: 260, height: 260, marginRight: 10 }} />
                 </View>
-                {itemAcquired &&(
+                {itemAcquired && (
                     <View style={styles.tagContainer}>
                         <View style={styles.tags}>
                             <Text style={styles.tagsText}>acquired</Text>
@@ -37,9 +38,10 @@ export default RewardDetailScreen = ({ route }) => {
                         <Text style={styles.benefitsText}>50 Euro Amazon gift card</Text>
                     </View>
                 </View>
-                {itemAcquired &&(
-                <CtaButton onPress={() => { console.log("Benefits Claimed") }} />
+                {itemAcquired && (
+                    <CtaButton onPress={() => { console.log("Benefits Claimed") }} />
                 )}
+                <View style={{ height: 64 }}></View>
             </ScrollView>
         </ImageBackground>
     );

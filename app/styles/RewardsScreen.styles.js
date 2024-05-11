@@ -36,4 +36,7 @@ export default StyleSheet.create({
         marginLeft: 8,
         fontWeight: '500'
     },
+    contentContainer: {
+        paddingBottom: 64,
+    },
 });

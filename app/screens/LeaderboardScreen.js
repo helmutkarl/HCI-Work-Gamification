@@ -5,6 +5,7 @@ import { View, ScrollView, Text, ImageBackground, Image } from 'react-native';
 
 import background from '../assets/images/background.png';
 import styles from '../styles/LeaderBoardScreen.styles.js';
+import global from '../styles/global.styles.js';
 
 export default LeaderboardScreen = () => {
     return (
@@ -15,7 +16,7 @@ export default LeaderboardScreen = () => {
                 <Text style={styles.titleText}>Leaderboard</Text>
                 <Text style={styles.subTitleText}>Can you make it to the top?</Text>
             </View>
-            <ScrollView>
+            <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false}>
                 <View style={styles.leadersContainer}>
                     <Text style={styles.rankContainer}>1</Text>
                     <Image
@@ -76,6 +77,7 @@ export default LeaderboardScreen = () => {
                         <Text style={styles.position}>Public Relations</Text>
                     </View>
                 </View>
+                <View style={{ height: 64 }}></View>
             </ScrollView>
         </ImageBackground>
     );
