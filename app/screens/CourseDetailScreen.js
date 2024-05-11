@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView, TouchableOpacity, Text, ImageBackground } from 'react-native';
+import { View, ScrollView, TouchableOpacity, Text, ImageBackground } from 'react-native';
 
 import background from '../assets/images/background.png';
 import styles from '../styles/CourseDetailScreen.styles.js';
 
 export default CourseDetailScreen = (route) => {
-    const { imageUrl, itemName, itemStatus, itemCategory, itemType, itemSubtitle, } = route.params;
+    const { image, itemName, itemStatus, itemCategory, itemType, itemSubtitle, } = route.params;
 
     return (
         <ImageBackground
@@ -13,7 +13,7 @@ export default CourseDetailScreen = (route) => {
             style={styles.backgroundContainer}>
             <ScrollView>
                 <View style={styles.imageContainer}>
-                    <Image source={imageUrl} style={{ width: 260, height: 260, marginRight: 10 }} />
+                    <Image source={image} style={{ width: 260, height: 260, marginRight: 10 }} />
                 </View>
                 <View style={styles.titleContainer}>
                     <Text style={styles.titleText}>{itemName}</Text>

@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Image , TouchableOpacity} from 'react-native';
+import { Image, TouchableOpacity } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import CourseCatalogueScreen from './app/screens/CourseCatalogueScreen';
-import LeaderboardScreen from './app/screens/LeaderboardScreen';
-import RewardsScreen from './app/screens/RewardsScreen';
-import ProfileScreen from './app/screens/ProfileScreen';
-import IntroScreen from './app/screens/IntroScreen';
-import RewardDetailScreen from './app/screens/RewardDetailScreen';
+import CourseCatalogueScreen from './app/screens/CourseCatalogueScreen.js';
+import LeaderboardScreen from './app/screens/LeaderboardScreen.js';
+import RewardsScreen from './app/screens/RewardsScreen.js';
+import ProfileScreen from './app/screens/ProfileScreen.js';
+import IntroScreen from './app/screens/IntroScreen.js';
+import RewardDetailScreen from './app/screens/RewardDetailScreen.js';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -19,12 +19,22 @@ const CourseStack = createStackNavigator();
 
 function MainNavigator() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{
+      tabBarLabel: () => null,
+      tabBarStyle: {
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        borderTopLeftRadius: 12,
+        borderTopRightRadius: 12,
+        position: 'absolute',
+        height: 64,
+        elevation: 0,
+      }
+    }}>
       <Tab.Screen name="Courses" component={CourseCatalogueScreen} options={{
         tabBarIcon: ({ focused, size }) => (
           <Image
             source={focused ? require('./app/assets/icons/menu_rocket_full.png') : require('./app/assets/icons/menu_rocket_empty.png')}
-            style={{ width: size, height: size }}
+            style={{ width: 32, height: 32 }}
           />
         ),
         headerShown: false,
@@ -33,7 +43,7 @@ function MainNavigator() {
         tabBarIcon: ({ focused, size }) => (
           <Image
             source={focused ? require('./app/assets/icons/menu_trophy_full.png') : require('./app/assets/icons/menu_trophy_empty.png')}
-            style={{ width: size, height: size }}
+            style={{ width: 32, height: 32 }}
           />
         ),
         headerShown: false,
@@ -42,7 +52,7 @@ function MainNavigator() {
         tabBarIcon: ({ focused, size }) => (
           <Image
             source={focused ? require('./app/assets/icons/menu_shield_full.png') : require('./app/assets/icons/menu_shield_empty.png')}
-            style={{ width: size, height: size }}
+            style={{ width: 32, height: 32 }}
           />
         ),
         headerShown: false,
@@ -51,12 +61,12 @@ function MainNavigator() {
         tabBarIcon: ({ focused, size }) => (
           <Image
             source={focused ? require('./app/assets/icons/menu_user_full.png') : require('./app/assets/icons/menu_user_empty.png')}
-            style={{ width: size, height: size }}
+            style={{ width: 32, height: 32 }}
           />
         ),
         headerShown: false,
       }} />
-    </Tab.Navigator>
+    </Tab.Navigator >
   );
 }
 
@@ -102,44 +112,44 @@ function AppNavigator() {
 
 function CourseStackNavigator() {
   return (
-      <CourseStack.Navigator>
-            <CourseStack.Screen name="CourseCatalogueScreen" component={CourseCatalogueScreen} options={{headerShown: false}} />
-            <CourseStack.Screen 
-              name="CourseDetailScreen" 
-              component={CourseDetailScreen}
-              options={({ navigation }) => ({
-                headerBackTitleVisible: false,
-                headerTransparent: true,
-                headerTitle: '',
-                headerLeft: () => <CustomBackButton onPress={() => navigation.goBack()}/>,
-              })}
-               />
-      </CourseStack.Navigator>
+    <CourseStack.Navigator>
+      <CourseStack.Screen name="CourseCatalogueScreen" component={CourseCatalogueScreen} options={{ headerShown: false }} />
+      <CourseStack.Screen
+        name="CourseDetailScreen"
+        component={CourseDetailScreen}
+        options={({ navigation }) => ({
+          headerBackTitleVisible: false,
+          headerTransparent: true,
+          headerTitle: '',
+          headerLeft: () => <CustomBackButton onPress={() => navigation.goBack()} />,
+        })}
+      />
+    </CourseStack.Navigator>
   );
 }
 
 function RewardStackNavigator() {
   return (
-      <RewardStack.Navigator>
-            <RewardStack.Screen name="RewardsScreen" component={RewardsScreen} options={{headerShown: false}} />
-            <RewardStack.Screen 
-              name="RewardDetailScreen" 
-              component={RewardDetailScreen}
-              options={({ navigation }) => ({
-                headerBackTitleVisible: false,
-                headerTransparent: true,
-                headerTitle: '',
-                headerLeft: () => <CustomBackButton onPress={() => navigation.goBack()}/>,
-              })}
-               />
-      </RewardStack.Navigator>
+    <RewardStack.Navigator>
+      <RewardStack.Screen name="RewardsScreen" component={RewardsScreen} options={{ headerShown: false }} />
+      <RewardStack.Screen
+        name="RewardDetailScreen"
+        component={RewardDetailScreen}
+        options={({ navigation }) => ({
+          headerBackTitleVisible: false,
+          headerTransparent: true,
+          headerTitle: '',
+          headerLeft: () => <CustomBackButton onPress={() => navigation.goBack()} />,
+        })}
+      />
+    </RewardStack.Navigator>
   );
 }
 
 const CustomBackButton = ({ onPress }) => {
   return (
     <TouchableOpacity onPress={onPress}>
-     <Image source={require('./app/assets/icons/button_back.png')} style={{ width: 30, height: 30, marginTop: 20, marginLeft: 20 }} />
+      <Image source={require('./app/assets/icons/button_back.png')} style={{ width: 30, height: 30, marginTop: 20, marginLeft: 20 }} />
     </TouchableOpacity>
   );
 };
