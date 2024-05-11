@@ -10,7 +10,9 @@ export default RewardsScreen = ({ navigation }) => {
             navigation.navigate('RewardDetailScreen', {
                 imageUrl: item.image,
                 itemName: item.name,
-                itemAcquired: item.acquired
+                itemAcquired: item.acquired,
+                itemXp: item.xp,
+                itemDescription: item.description,
             });
         };
 

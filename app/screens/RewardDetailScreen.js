@@ -7,7 +7,7 @@ import styles from '../styles/RewardDetailScreen.styles.js';
 //CTA image needs to be imported in a bigger size + othr button for not claimed rewards!!!
 
 export default RewardDetailScreen = ({ route }) => {
-    const { imageUrl, itemName, itemAcquired } = route.params;
+    const { imageUrl, itemName, itemXp, itemDescription, itemAcquired } = route.params;
 
     return (
         <ImageBackground
@@ -19,8 +19,8 @@ export default RewardDetailScreen = ({ route }) => {
                 </View>
                 <View style={styles.titleContainer}>
                     <Text style={styles.titleText}>{itemName}</Text>
-                    <Text style={styles.subTitleText}>200 XP</Text>
-                    <Text style={styles.descriptionText}>The Cyber Guardian Badge symbolizes your dedication to upholding the highest standards of IT security within our organization. By completing ALL quarterly IT Security trainings this year, you've equipped yourself with essential knowledge and skills to identify and mitigate cybersecurity threats effectively.</Text>
+                    <Text style={styles.subTitleText}>{itemXp} XP</Text>
+                    <Text style={styles.descriptionText}>{itemDescription}</Text>
                     <Text style={styles.benefitsTitle}>Your Benefits</Text>
                     <View style={styles.benefitsContainer}>
                         <Image source={require('../assets/icons/star.png')} style={{ width: 20, height: 20, marginTop: 10, marginRight: 10 }} />

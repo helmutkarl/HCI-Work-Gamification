@@ -3,48 +3,64 @@
         "id": "1",
         "name": "Cyber Guardian Badge",
         "acquired": "true",
+        "xp": "100",
+        "description": "The Cyber Guardian Badge symbolizes your dedication to upholding the highest standards of IT security within our organization. By completing ALL quarterly IT Security trainings this year, you've equipped yourself with essential knowledge and skills to identify and mitigate cybersecurity threats effectively.",
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/color/sheild-front-color.png?new_icon"
     },
     {
         "id": "2",
         "name": "Fire Drill",
         "acquired": "true",
+        "xp": "75",
+        "description": "The Fire Drill accompltishment is awarded upon completion of the yearly fire safety training, this badge signifies your dedication to maintaining a secure workplace environment. Wear it proudly as a symbol of your commitment to fire preparedness and safety awareness.",
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/color/fire-front-color.png?new_icon"
     },
     {
         "id": "3",
         "name": "First Target",
         "acquired": "false",
+        "xp": "125",
+        "description": "This prestigious badge is awarded to those who successfully complete all onboarding training modules. It symbolizes your readiness to excel in your role and contribute effectively to the organization from day one. Wear it proudly as a testament to your commitment to excellence and continuous learning.",
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/target-front-clay.png?new_icon"
     },
     {
         "id": "4",
         "name": "500 XPs",
         "acquired": "false",
+        "xp": "50",
+        "description": "Awarded upon reaching the milestone of collecting 500 XP, this badge showcases your dedication and proficiency in various tasks and challenges. Wear it proudly as a testament to your perseverance and skill in leveling up your abilities. Keep pushing forward and continue to shine as an XP champion!",
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/medal-front-clay.png?new_icon"
     },
     {
         "id": "5",
         "name": "1000 XPs",
         "acquired": "false",
+        "xp": "75",
+        "description": "Awarded upon accumulating 1000 XP, this badge represents your exceptional dedication, mastery, and expertise across various tasks and challenges. Wear it proudly as a symbol of your relentless pursuit of excellence and your commitment to continuous improvement. Congratulations on reaching this impressive milestone!",
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/bookmark-fav-front-clay.png?new_icon"
     },
     {
         "id": "6",
         "name": "Star Award",
         "acquired": "false",
+        "xp": "75",
+        "description": "This esteemed badge is bestowed upon those who have successfully completed 10 courses. It signifies your dedication to learning and mastery across a diverse range of topics. Wear it proudly as a testament to your commitment to personal and professional development. Congratulations on this significant achievement!",
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/star-front-clay.png?new_icon"
     },
     {
         "id": "7",
         "name": "Overachiever Trophy",
         "acquired": "false",
+        "xp": "100",
+        "description": "This exclusive badge is reserved for those who have secured a position in the top 3 of the leaderboard. It represents your outstanding performance, competitive spirit, and leadership within the community. Wear it proudly as a symbol of your dedication, skill, and achievement in rising to the top. Congratulations on your remarkable success!",
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/trophy-front-clay.png?new_icon"
     },
     {
         "id": "8",
         "name": "Royalty Status",
         "acquired": "false",
+        "xp": "150",
+        "description": "This prestigious honor is awarded to those who have demonstrated exceptional dedication and proficiency by completing 20 courses. It symbolizes your relentless pursuit of knowledge and mastery across a wide array of subjects. Wear it proudly as a testament to your commitment to continuous learning and intellectual growth. Congratulations on this remarkable achievement!",
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/crow-front-clay.png?new_icon"
     }
 ]
