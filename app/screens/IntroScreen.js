@@ -4,6 +4,7 @@ import AppIntroSlider from 'react-native-app-intro-slider';
 
 import background from '../assets/images/background.png';
 import styles from '../styles/IntroScreen.styles.js';
+import global from '../styles/global.styles.js';
 
 const slides = [
     {

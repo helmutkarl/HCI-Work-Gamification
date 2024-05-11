@@ -1,7 +1,8 @@
 import React from 'react';
 import { ScrollView, ImageBackground, Image, View, Text } from 'react-native';
 import background from '../assets/images/background.png';
-import styles from '../styles/ProfileScreen.styles';
+import styles from '../styles/ProfileScreen.styles.js';
+import global from '../styles/global.styles.js';
 import usersData from '../data/users.json';
 import coursesData from '../data/courses.json';
 import { activeUserId } from '../config/config.js';
@@ -13,7 +14,7 @@ export default ProfileScreen = ({ navigation }) => {
 
     return (
         <ImageBackground source={background} style={styles.backgroundContainer}>
-            <ScrollView showsVerticalScrollIndicator={false}>
+            <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false}>
                 <View style={styles.profileImageContainer}>
                     <Image
                         source={{ uri: userProfile.image }}

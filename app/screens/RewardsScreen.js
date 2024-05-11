@@ -3,6 +3,7 @@ import { View, FlatList, Text, Image, ImageBackground, TouchableOpacity } from '
 import rewardsData from '../data/rewards.json';
 import background from '../assets/images/background.png';
 import styles from '../styles/RewardsScreen.styles';
+import global from '../styles/global.styles.js';
 
 export default RewardsScreen = ({ navigation }) => {
     const renderItem = ({ item }) => {
@@ -29,7 +30,7 @@ export default RewardsScreen = ({ navigation }) => {
                 <Text style={styles.titleText}>My Rewards</Text>
                 <Text style={styles.subTitleText}>Claim your rewards here!</Text>
             </View>
-            <FlatList
+            <FlatList style={global.scrollView} showsVerticalScrollIndicator={false}
                 data={rewardsData}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}

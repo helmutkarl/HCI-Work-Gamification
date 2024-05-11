@@ -3,6 +3,7 @@ import { View, ScrollView, TouchableOpacity, Text, ImageBackground } from 'react
 
 import background from '../assets/images/background.png';
 import styles from '../styles/CourseDetailScreen.styles.js';
+import global from '../styles/global.styles.js';
 
 export default CourseDetailScreen = (route) => {
     const { image, itemName, itemStatus, itemCategory, itemType, itemSubtitle, } = route.params;
@@ -11,7 +12,7 @@ export default CourseDetailScreen = (route) => {
         <ImageBackground
             source={background}
             style={styles.backgroundContainer}>
-            <ScrollView>
+            <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false}>
                 <View style={styles.imageContainer}>
                     <Image source={image} style={{ width: 260, height: 260, marginRight: 10 }} />
                 </View>
