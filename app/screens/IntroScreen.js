@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native';
+import { View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 
 import background from '../assets/images/background.png';
-import colors from '../config/colors.js';
+import styles from '../styles/IntroScreen.styles.js';
 
 const slides = [
     {
@@ -28,7 +28,7 @@ const slides = [
     }
 ];
 
-const OnboardingScreen = ({ onDone }) => {
+export default OnboardingScreen = ({ onDone }) => {
     return (
         <AppIntroSlider
             renderItem={({ item }) => renderItem(item)}
@@ -73,44 +73,3 @@ const renderDoneButton = (onDone) => {
         </TouchableOpacity>
     );
 };
-
-const styles = StyleSheet.create({
-    backgroundContainer: {
-        flex: 1,
-        resizeMode: 'cover',
-        justifyContent: 'center'
-    },
-    container: {
-        padding: '10%'
-    },
-    icon: {
-        width: 164,
-        height: 164,
-        textAlign: 'center',
-    },
-    text: {
-        color: 'white',
-        fontSize: 32,
-        color: colors.titles,
-    },
-    activeDotStyle: {
-        backgroundColor: colors.primary,
-        width: 20,
-        height: 10,
-        borderRadius: 5,
-        marginHorizontal: 3,
-    },
-    buttonImage: {
-        height: 64,
-        width: 64,
-        position: 'relative',
-        bottom: 16,
-    },
-    button: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'transparent',
-    }
-});
-
-export default OnboardingScreen;

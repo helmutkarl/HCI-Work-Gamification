@@ -15,7 +15,7 @@ Gerät(e), auf dem(denen) getestet wurde:
 
 Externe Libraries und Frameworks:
 @react-navigation/bottom-tabs
-@react-navigation/native-stack
+@react-navigation/stack
 @react-native-async-storage/async-storage
 react-native-app-intro-slider
 

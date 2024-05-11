@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "name": "Cyber Guardian Badge",
+        "acquired": "true",
+        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+    },
+    {
+        "id": "2",
+        "name": "Fire Drill",
+        "acquired": "true",
+        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+    },
+    {
+        "id": "3",
+        "name": "First Target",
+        "acquired": "false",
+        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+    },
+    {
+        "id": "4",
+        "name": "500 XPs",
+        "acquired": "false",
+        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+    },
+    {
+        "id": "5",
+        "name": "1000 XPs",
+        "acquired": "false",
+        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+    },
+    {
+        "id": "6",
+        "name": "Star Award",
+        "acquired": "false",
+        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+    },
+    {
+        "id": "7",
+        "name": "Overachiever Trophy",
+        "acquired": "false",
+        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+    },
+    {
+        "id": "8",
+        "name": "Royalty Status",
+        "acquired": "false",
+        "image": "https://example.com/images/reward_crown.png"
+    }
+]
