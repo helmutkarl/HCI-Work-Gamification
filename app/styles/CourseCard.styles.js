@@ -38,4 +38,49 @@ export default StyleSheet.create({
         height: 100,
         width: 100
     },
+    tagsText: {
+        color: colors.secondary,
+        fontSize: 16,
+        fontWeight: '900'
+    },
+    progressLine: {
+        opacity: 0.3,
+        height: 3,
+        borderTopWidth: 3,
+        borderColor: '#27476E',
+        borderStyle: "solid",
+        marginTop: 28,
+        width: 230,
+        marginLeft: 8,
+        position: "absolute",
+    },
+    progressLineFull: {
+        height: 3,
+        borderTopWidth: 3,
+        borderColor: '#27476E',
+        borderStyle: "solid",
+        marginTop: 28,
+        width: 150,
+        marginLeft: 8,
+        position: "absolute",
+    },
+    statusTags: {
+        marginTop: 80,
+        marginLeft: 92,
+        paddingHorizontal: 8,
+        paddingVertical: 3,
+        borderRadius: 15,
+        elevation: 5,
+        shadowRadius: 12,
+        overflow: "hidden",
+        backgroundColor: '#EAF8BF',
+        //flexDirection: 'row',
+        alignItems: 'right',
+        justifyContent: "right",
+    },
+    statusTagsText: {
+        color: '#27476E',
+        fontSize: 12,
+        fontWeight: '500'
+    },
 });

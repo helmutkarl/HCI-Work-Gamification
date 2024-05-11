@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "name": "Cyber Guardian Badge",
         "acquired": "true",
         "xp": "100",
@@ -8,7 +8,7 @@
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/color/sheild-front-color.png?new_icon"
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "Fire Drill",
         "acquired": "true",
         "xp": "75",
@@ -16,7 +16,7 @@
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/color/fire-front-color.png?new_icon"
     },
     {
-        "id": "3",
+        "id": 3,
         "name": "First Target",
         "acquired": "false",
         "xp": "125",
@@ -24,7 +24,7 @@
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/target-front-clay.png?new_icon"
     },
     {
-        "id": "4",
+        "id": 4,
         "name": "500 XPs",
         "acquired": "false",
         "xp": "50",
@@ -32,7 +32,7 @@
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/medal-front-clay.png?new_icon"
     },
     {
-        "id": "5",
+        "id": 5,
         "name": "1000 XPs",
         "acquired": "false",
         "xp": "75",
@@ -40,7 +40,7 @@
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/bookmark-fav-front-clay.png?new_icon"
     },
     {
-        "id": "6",
+        "id": 6,
         "name": "Star Award",
         "acquired": "false",
         "xp": "75",
@@ -48,7 +48,7 @@
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/star-front-clay.png?new_icon"
     },
     {
-        "id": "7",
+        "id": 7,
         "name": "Overachiever Trophy",
         "acquired": "false",
         "xp": "100",
@@ -56,7 +56,7 @@
         "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/trophy-front-clay.png?new_icon"
     },
     {
-        "id": "8",
+        "id": 8,
         "name": "Royalty Status",
         "acquired": "false",
         "xp": "150",
