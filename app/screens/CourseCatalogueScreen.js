@@ -35,6 +35,7 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                         onPress={() => navigation.navigate('CourseDetailScreen', { image: imageURL })}
                     />
                 ))}
+                <View style={{ height: 64 }}></View>
             </ScrollView>
         </ImageBackground>
     );

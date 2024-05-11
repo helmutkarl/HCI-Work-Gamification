@@ -40,6 +40,7 @@ export default ProfileScreen = ({ navigation }) => {
                         />
                     );
                 })}
+                <View style={{ height: 64 }}></View>
             </ScrollView>
         </ImageBackground>
     );

@@ -32,6 +32,7 @@ export default RewardsScreen = ({ navigation }) => {
             </View>
             <FlatList style={global.scrollView} showsVerticalScrollIndicator={false}
                 data={rewardsData}
+                contentContainerStyle={styles.contentContainer}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
                 numColumns={2}

@@ -3,6 +3,6 @@ import colors from '../config/colors';
 
 export default commonStyles = StyleSheet.create({
     scrollView: {
-        marginBottom: 64
+        paddingBottom: 64
     }
 });

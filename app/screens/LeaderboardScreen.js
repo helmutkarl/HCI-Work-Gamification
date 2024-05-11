@@ -77,6 +77,7 @@ export default LeaderboardScreen = () => {
                         <Text style={styles.position}>Public Relations</Text>
                     </View>
                 </View>
+                <View style={{ height: 64 }}></View>
             </ScrollView>
         </ImageBackground>
     );

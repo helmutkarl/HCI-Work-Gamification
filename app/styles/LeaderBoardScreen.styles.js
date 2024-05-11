@@ -29,7 +29,6 @@ export default StyleSheet.create({
         fontWeight: '500'
     },
 
-
     leadersContainer: {
         marginTop: 30,
         margin: 18,
@@ -40,7 +39,6 @@ export default StyleSheet.create({
         elevation: 5,
         shadowRadius: 12,
     },
-
 
     courseTextContainer: {
         marginTop: 10,

@@ -31,6 +31,7 @@ export default CourseDetailScreen = (route) => {
                     </View>
                 </View>
                 <CtaButton onPress={() => { console.log("Benefits Claimed") }} />
+                <View style={{ height: 64 }}></View>
             </ScrollView>
         </ImageBackground>
     );

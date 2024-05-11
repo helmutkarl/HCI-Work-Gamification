@@ -20,6 +20,7 @@ export default function LoginScreen(props) {
                         <Icon name='keyboard-arrow-right' size={24} color={colors.white} />
                     </TouchableOpacity>
                 </View>
+                <View style={{ height: 64 }}></View>
             </ScrollView>
         </ImageBackground>
     );

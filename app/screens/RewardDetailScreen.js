@@ -42,6 +42,7 @@ export default RewardDetailScreen = ({ route }) => {
                 {itemAcquired && (
                     <CtaButton onPress={() => { console.log("Benefits Claimed") }} />
                 )}
+                <View style={{ height: 64 }}></View>
             </ScrollView>
         </ImageBackground>
     );

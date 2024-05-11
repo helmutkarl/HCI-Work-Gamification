@@ -22,7 +22,7 @@ function MainNavigator() {
     <Tab.Navigator screenOptions={{
       tabBarLabel: () => null,
       tabBarStyle: {
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        backgroundColor: 'rgba(255, 255, 255, 0.64)',
         borderTopLeftRadius: 12,
         borderTopRightRadius: 12,
         position: 'absolute',
