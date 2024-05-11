@@ -5,6 +5,7 @@ import background from '../assets/images/background.png'
 import styles from '../styles/RewardDetailScreen.styles.js';
 
 
+
 //CTA image needs to be imported in a bigger size + othr button for not claimed rewards!!!
 
 

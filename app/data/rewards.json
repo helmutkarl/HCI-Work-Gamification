@@ -3,48 +3,48 @@
         "id": "1",
         "name": "Cyber Guardian Badge",
         "acquired": "true",
-        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+        "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/color/sheild-front-color.png?new_icon"
     },
     {
         "id": "2",
         "name": "Fire Drill",
         "acquired": "true",
-        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+        "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/color/fire-front-color.png?new_icon"
     },
     {
         "id": "3",
         "name": "First Target",
         "acquired": "false",
-        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+        "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/target-front-clay.png?new_icon"
     },
     {
         "id": "4",
         "name": "500 XPs",
         "acquired": "false",
-        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+        "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/medal-front-clay.png?new_icon"
     },
     {
         "id": "5",
         "name": "1000 XPs",
         "acquired": "false",
-        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+        "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/bookmark-fav-front-clay.png?new_icon"
     },
     {
         "id": "6",
         "name": "Star Award",
         "acquired": "false",
-        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+        "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/star-front-clay.png?new_icon"
     },
     {
         "id": "7",
         "name": "Overachiever Trophy",
         "acquired": "false",
-        "image": "https://cdn-icons-png.flaticon.com/512/7937/7937682.png"
+        "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/trophy-front-clay.png?new_icon"
     },
     {
         "id": "8",
         "name": "Royalty Status",
         "acquired": "false",
-        "image": "https://example.com/images/reward_crown.png"
+        "image": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/front/clay/crow-front-clay.png?new_icon"
     }
 ]

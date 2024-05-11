@@ -5,6 +5,8 @@ import background from '../assets/images/background.png';
 import styles from '../styles/CourseDetailScreen.styles.js';
 
 export default CourseDetailScreen = (route) => {
+    const { imageUrl, itemName, itemStatus, itemCategory, itemType, itemSubtitle, } = route.params;
+
     return (
         <ImageBackground
             source={background}

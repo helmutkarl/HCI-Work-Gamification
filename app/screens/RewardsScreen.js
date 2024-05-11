@@ -2,6 +2,7 @@ import React from 'react';
 import { View, FlatList, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import rewardsData from '../data/rewards.json';
 import background from '../assets/images/background.png';
+import styles from '../styles/RewardsScreen.styles';
 
 export default RewardsScreen = ({ navigation }) => {
     const renderItem = ({ item }) => {
@@ -15,16 +16,16 @@ export default RewardsScreen = ({ navigation }) => {
 
         return (
             <TouchableOpacity onPress={handlePress}>
-                <Image source={{ uri: item.image }} style={{ width: 180, height: 180, marginLeft: 3 }} />
+                <Image source={{ uri: item.image }} style={{ width: 180, height: 180, marginLeft: 20 }} />
             </TouchableOpacity>
         );
     };
 
     return (
         <ImageBackground source={background} style={{ flex: 1 }}>
-            <View style={{ padding: 20 }}>
-                <Text style={{ fontSize: 22, fontWeight: 'bold' }}>My Rewards</Text>
-                <Text style={{ fontSize: 16 }}>Claim your rewards here!</Text>
+            <View style={styles.titleContainer}>
+                <Text style={styles.titleText}>My Rewards</Text>
+                <Text style={styles.subTitleText}>Claim your rewards here!</Text>
             </View>
             <FlatList
                 data={rewardsData}

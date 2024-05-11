@@ -2,15 +2,28 @@
     {
         "id": 1,
         "image": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/power-bi-icon.png",
-        "category": "Online Classroom",
+        "type": "Online Classroom",
+        "status": "",
+        "category": "IT",
         "title": "Power BI",
         "subtitle": "22.05.2023 | 6 h | 250 XP"
     },
     {
         "id": 2,
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1101px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png",
-        "category": "e-Learning",
+        "type": "e-Learning",
+        "status": "",
+        "category": "IT",
         "title": "Excel",
         "subtitle": "Available Now | 4 h | 200 XP"
+    },
+    {
+        "id": 3,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1101px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png",
+        "type": "e-Learning",
+        "status": "Completed",
+        "category": "IT",
+        "title": "Excel Advanced",
+        "subtitle": "Available Now | 5 h | 250 XP"
     }
 ]

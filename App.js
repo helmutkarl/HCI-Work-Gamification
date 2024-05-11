@@ -15,6 +15,7 @@ import RewardDetailScreen from './app/screens/RewardDetailScreen';
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 const RewardStack = createStackNavigator();
+const CourseStack = createStackNavigator();
 
 function MainNavigator() {
   return (
@@ -99,7 +100,23 @@ function AppNavigator() {
   );
 }
 
-
+function CourseStackNavigator() {
+  return (
+      <CourseStack.Navigator>
+            <CourseStack.Screen name="CourseCatalogueScreen" component={CourseCatalogueScreen} options={{headerShown: false}} />
+            <CourseStack.Screen 
+              name="CourseDetailScreen" 
+              component={CourseDetailScreen}
+              options={({ navigation }) => ({
+                headerBackTitleVisible: false,
+                headerTransparent: true,
+                headerTitle: '',
+                headerLeft: () => <CustomBackButton onPress={() => navigation.goBack()}/>,
+              })}
+               />
+      </CourseStack.Navigator>
+  );
+}
 
 function RewardStackNavigator() {
   return (
@@ -127,4 +144,4 @@ const CustomBackButton = ({ onPress }) => {
   );
 };
 
-export default AppNavigator; RewardStackNavigator;
+export default AppNavigator; RewardStackNavigator; CourseStackNavigator;
