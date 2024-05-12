@@ -8,7 +8,7 @@ import coursesData from '../data/courses.json';
 import { activeUserId } from '../config/config.js';
 import CourseCard from '../components/CourseCard';
 import ProfileStats from '../components/ProfileStats';
-import ProfileFilters from '../components/Filters';
+import StatusFilters from '../components/StatusFilters.js';
 
 
 export default ProfileScreen = ({ navigation, users}) => {
@@ -38,7 +38,7 @@ export default ProfileScreen = ({ navigation, users}) => {
                     <Text style={styles.subTitleText}>{userProfile.role}</Text>
                 </View>
                 <View>
-                    <ProfileFilters users={[userProfile]}  userId={activeUserId} onPress={handleCoursesFilter}/>
+                    <StatusFilters users={[userProfile]}  userId={activeUserId} onPress={handleCoursesFilter}/>
                 </View>
                 {filteredCourses.map((courseProfile, index) => {
                     const course = getCourseDetails(courseProfile.id);

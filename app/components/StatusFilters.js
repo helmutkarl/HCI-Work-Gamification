@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import styles from '../styles/Filters.styles';
 
-export default ProfileFilters = ({users, userId, onPress}) => {
+export default StatusFilters = ({users, userId, onPress}) => {
 
         const [selectedTag, setSelectedTag] = useState("All");
     
@@ -35,7 +35,7 @@ export default ProfileFilters = ({users, userId, onPress}) => {
         <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            pagingEnabled={true}>
+            scrollEnabled={true}>
             <View style={styles.tagContainer}>
                 {tags.map((tag, index) => (
                     <TouchableOpacity
@@ -52,3 +52,4 @@ export default ProfileFilters = ({users, userId, onPress}) => {
         </ScrollView>
     )
 };
+

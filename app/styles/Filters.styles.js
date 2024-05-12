@@ -10,8 +10,8 @@ export default StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'left',
         justifyContent: 'left',
-        margin: 10,
-        marginTop: 40,
+        margin: 5,
+    //    marginTop: 40,
     },
 
     tags: {

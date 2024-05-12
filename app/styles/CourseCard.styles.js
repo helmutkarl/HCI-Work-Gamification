@@ -14,7 +14,7 @@ export default StyleSheet.create({
         elevation: 5,
         shadowRadius: 12,
     },
-    courseCategory: {
+    courseType: {
         color: colors.secondary,
         fontSize: 14,
         marginLeft: 8,
@@ -65,8 +65,8 @@ export default StyleSheet.create({
         position: "absolute",
     },
     statusTags: {
-        marginTop: 80,
-        marginLeft: 92,
+        marginTop: 2,
+        marginLeft: 170,
         paddingHorizontal: 8,
         paddingVertical: 3,
         borderRadius: 15,

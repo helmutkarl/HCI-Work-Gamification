@@ -10,7 +10,7 @@ export default CourseCard = ({ course, onPress }) => {
                 style={styles.image}
                 resizeMode="contain" />
             <View>
-                <Text style={styles.courseCategory}>{course.category}</Text>
+                <Text style={styles.courseType}>{course.type}</Text>
                 <Text style={styles.courseTitle}>{course.title}</Text>
                 <Text style={styles.courseSubTitle}>{course.subtitle}</Text>
                 {course.status &&
