@@ -21,6 +21,30 @@
         "type": "e-Learning",
         "category": "IT",
         "title": "Excel Advanced",
+        "su,btitle": "Available Now | 5 h | 250 XP"
+    },
+    {
+        "id": 4,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1101px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png",
+        "type": "e-Learning",
+        "category": "IT",
+        "title": "Excel Advanced",
+        "subtitle": "Available Now | 5 h | 250 XP"
+    },
+    {
+        "id": 5,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1101px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png",
+        "type": "e-Learning",
+        "category": "IT",
+        "title": "Excel Advanced",
+        "subtitle": "Available Now | 5 h | 250 XP"
+    },
+    {
+        "id": 6,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1101px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png",
+        "type": "e-Learning",
+        "category": "IT",
+        "title": "Excel Advanced",
         "subtitle": "Available Now | 5 h | 250 XP"
     }
 ]

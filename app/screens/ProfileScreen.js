@@ -7,6 +7,8 @@ import usersData from '../data/users.json';
 import coursesData from '../data/courses.json';
 import { activeUserId } from '../config/config.js';
 import CourseCard from '../components/CourseCard';
+import ProfileStats from '../components/ProfileStats';
+
 
 export default ProfileScreen = ({ navigation }) => {
     const userProfile = usersData.find(user => user.id === activeUserId);
@@ -21,6 +23,11 @@ export default ProfileScreen = ({ navigation }) => {
                         style={{ width: 220, height: 220 }}
                         resizeMode="contain"
                     />
+                </View>
+                <View>
+                    {usersData.map(user => (
+                    <ProfileStats key={user.id} user={user} />
+                    ))}
                 </View>
                 <View style={styles.titleContainer}>
                     <Text style={styles.titleText}>{userProfile.name}</Text>
@@ -45,3 +52,5 @@ export default ProfileScreen = ({ navigation }) => {
         </ImageBackground>
     );
 };
+
+

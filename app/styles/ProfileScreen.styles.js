@@ -63,5 +63,10 @@ export default StyleSheet.create({
         fontSize: 16,
         marginLeft: 8,
         fontWeight: '500'
-    }
+    },
+    tagsText: {
+        color: colors.secondary,
+        fontSize: 16,
+        fontWeight: '700'
+    },
 });

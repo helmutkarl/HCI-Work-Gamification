@@ -15,6 +15,18 @@
             {
                 "id": 2,
                 "status": "In Progress"
+            },
+            {
+                "id": 3,
+                "status": "Completed"
+            },
+            {
+                "id": 4,
+                "status": "Completed"
+            },
+            {
+                "id": 5,
+                "status": "Registered"
             }
         ]
     }
