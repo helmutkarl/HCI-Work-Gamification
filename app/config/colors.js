@@ -5,5 +5,5 @@ export default {
     titles: '#27476E',
     text: '#202244',
     black: '#000',
-    white: '#fff'
+    white: '#fff',
 }

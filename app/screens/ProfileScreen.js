@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { ScrollView, ImageBackground, Image, View, Text } from 'react-native';
 import background from '../assets/images/background.png';
 import styles from '../styles/ProfileScreen.styles.js';
@@ -8,11 +8,17 @@ import coursesData from '../data/courses.json';
 import { activeUserId } from '../config/config.js';
 import CourseCard from '../components/CourseCard';
 import ProfileStats from '../components/ProfileStats';
+import ProfileFilters from '../components/Filters';
 
 
-export default ProfileScreen = ({ navigation }) => {
+export default ProfileScreen = ({ navigation, users}) => {
     const userProfile = usersData.find(user => user.id === activeUserId);
     const getCourseDetails = (courseId) => coursesData.find(course => course.id === courseId);
+
+    const [filteredCourses, setFilteredCourses] = useState([]);
+    const handleCoursesFilter = (filteredCourses) => {
+        setFilteredCourses(filteredCourses);
+    };
 
     return (
         <ImageBackground source={background} style={styles.backgroundContainer}>
@@ -25,15 +31,16 @@ export default ProfileScreen = ({ navigation }) => {
                     />
                 </View>
                 <View>
-                    {usersData.map(user => (
-                    <ProfileStats key={user.id} user={user} />
-                    ))}
+                    <ProfileStats user={userProfile}/>
                 </View>
                 <View style={styles.titleContainer}>
                     <Text style={styles.titleText}>{userProfile.name}</Text>
                     <Text style={styles.subTitleText}>{userProfile.role}</Text>
                 </View>
-                {userProfile.courses.map((courseProfile, index) => {
+                <View>
+                    <ProfileFilters users={[userProfile]}  userId={activeUserId} onPress={handleCoursesFilter}/>
+                </View>
+                {filteredCourses.map((courseProfile, index) => {
                     const course = getCourseDetails(courseProfile.id);
                     return (
                         <CourseCard
@@ -41,7 +48,7 @@ export default ProfileScreen = ({ navigation }) => {
                             course={{
                                 ...course,
                                 image: { uri: course.image },
-                                status: courseProfile.status  // Include status
+                                status: courseProfile.status
                             }}
                             onPress={() => navigation.navigate('CourseDetailScreen', { course })}
                         />
