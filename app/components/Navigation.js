@@ -6,12 +6,14 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-import CourseCatalogueScreen from '../screens/CourseCatalogueScreen';
-import LeaderboardScreen from '../screens/LeaderboardScreen';
-import RewardsScreen from '../screens/RewardsScreen';
-import ProfileScreen from '../screens/ProfileScreen';
-import IntroScreen from '../screens/IntroScreen';
-import RewardDetailScreen from '../screens/RewardDetailScreen';
+import CourseCatalogueScreen from '../screens/CourseCatalogueScreen.js';
+import LeaderboardScreen from '../screens/LeaderboardScreen.js';
+import RewardsScreen from '../screens/RewardsScreen.js';
+import ProfileScreen from '../screens/ProfileScreen.js';
+import LoginScreen from '../screens/LoginScreen.js';
+import IntroScreen from '../screens/IntroScreen.js';
+import RewardDetailScreen from '../screens/RewardDetailScreen.js';
+import { useAuth } from './AuthContext';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -73,6 +75,7 @@ function MainNavigator() {
 
 function AppNavigator() {
     const [firstStart, setFirstStart] = useState(null);
+    const { isLoggedIn } = useAuth();
 
     useEffect(() => {
         const checkFirstLaunch = async () => {
@@ -103,9 +106,10 @@ function AppNavigator() {
                     <Stack.Screen name="Intro">
                         {() => <IntroScreen onDone={handleDone} />}
                     </Stack.Screen>
-
-                ) : (
+                ) : isLoggedIn ? (
                     <Stack.Screen name="Main" component={MainNavigator} />
+                ) : (
+                    <Stack.Screen name="Login" component={LoginScreen} />
                 )}
             </Stack.Navigator>
         </NavigationContainer>
@@ -156,4 +160,4 @@ const CustomBackButton = ({ onPress }) => {
     );
 };
 
-export { AppNavigator };
+export default AppNavigator;
