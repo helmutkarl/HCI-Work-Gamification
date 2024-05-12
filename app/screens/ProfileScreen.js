@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { ScrollView, ImageBackground, Image, View, Text } from 'react-native';
+import { ScrollView, ImageBackground, Image, View, Text , Animated} from 'react-native';
 import background from '../assets/images/background.png';
 import styles from '../styles/ProfileScreen.styles.js';
 import global from '../styles/global.styles.js';
@@ -22,7 +22,7 @@ export default ProfileScreen = ({ navigation, users}) => {
 
     return (
         <ImageBackground source={background} style={styles.backgroundContainer}>
-            <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false}>
+            <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false} stickyHeaderIndices={[3]}>
                 <View style={styles.profileImageContainer}>
                     <Image
                         source={{ uri: userProfile.image }}

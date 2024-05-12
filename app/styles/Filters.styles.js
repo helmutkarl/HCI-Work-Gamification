@@ -11,6 +11,7 @@ export default StyleSheet.create({
         alignItems: 'left',
         justifyContent: 'left',
         margin: 10,
+        marginTop: 40,
     },
 
     tags: {
