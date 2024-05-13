@@ -68,7 +68,7 @@ export default LeaderboardScreen = () => {
                 <View style={styles.leadersContainer}>
                     <Text style={styles.rankContainer}>5</Text>
                     <Image
-                        source={require('../assets/images/person_image_4.png')}
+                        source={require('../assets/images/person_image_5.png')}
                         style={[styles.image, { marginRight: 4 }]}
                         resizeMode="contain" />
                     <View>
