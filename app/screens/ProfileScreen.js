@@ -63,8 +63,24 @@ export default ProfileScreen = ({ navigation, users}) => {
                     <Text style={styles.titleText}>{userProfile.name}</Text>
                     <Text style={styles.subTitleText}>{userProfile.role}</Text>
                 </View>
-
-                <View style={{paddingTop: 40}}>
+                <View style={styles.chartContainerAll}>
+                    <View style={styles.chartContainer}>
+                        <Image source={require('../assets/icons/chart_1.png')} style={{ width: 115, height: 115}} />
+                        <Text style={styles.chartNumber}>2</Text>
+                        <Text style={styles.chartText}>Registered</Text>
+                    </View>
+                    <View style={styles.chartContainer}>
+                        <Image source={require('../assets/icons/chart_2.png')} style={{ width: 115, height: 115}} />
+                        <Text style={styles.chartNumber}>1</Text>
+                        <Text style={styles.chartText}>In Progress</Text>
+                    </View>
+                    <View style={styles.chartContainer}>
+                        <Image source={require('../assets/icons/chart_3.png')} style={{ width: 115, height: 115}} />
+                        <Text style={styles.chartNumber}>2</Text>
+                        <Text style={styles.chartText}>Completed</Text>
+                    </View>
+                </View>
+                <View style={{paddingTop: 15}}>
                     <StatusFilters users={[userProfile]}  userId={activeUserId} onPress={handleCoursesFilter}/>
                 </View>
                 {filteredCourses.map((courseProfile, index) => {

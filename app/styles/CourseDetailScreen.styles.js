@@ -12,17 +12,16 @@ export default StyleSheet.create({
     imageContainer: {
         marginTop: 60,
         paddingHorizontal: 10,
-        //backgroundColor: colors.primary,
         flexDirection: 'column',
         alignItems: 'center',
     },
 
     ctaContainer: {
         marginTop: 25,
-        //backgroundColor: colors.primary,
         alignItems: 'center',
         position: 'relative',
     },
+
 
     titleContainer: {
         paddingHorizontal: 10,
@@ -109,7 +108,7 @@ export default StyleSheet.create({
         color: colors.text,
         fontSize: 18,
         marginLeft: 8,
-        marginTop: 35,
+        marginTop: 20,
         fontWeight: '700',
     },
 
@@ -153,7 +152,8 @@ export default StyleSheet.create({
         borderStyle: "solid",
         width: 372,
         marginLeft: 8,
-        position: "absolute",
+        //paddingVertical:5,
+        //position: "absolute",
     },
     progressLineFull: {
         height: 3,
