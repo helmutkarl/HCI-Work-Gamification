@@ -33,5 +33,5 @@ export default StyleSheet.create({
         borderRadius: 12,
         elevation: 5,
         shadowRadius: 12,
-    }
+    },
 });

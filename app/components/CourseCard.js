@@ -11,6 +11,12 @@ export default CourseCard = ({ course, onPress }) => {
                 resizeMode="contain" />
             <View>
                 <Text style={styles.courseType}>{course.type}</Text>
+                {course.status === "In Progress" &&
+                    <View>
+                        <View style={styles.progressLine}/>
+                        <View style={styles.progressLineFull}/>
+                    </View>
+                }
                 <Text style={styles.courseTitle}>{course.title}</Text>
                 <Text style={styles.courseSubTitle}>{course.subtitle}</Text>
                 {course.status &&

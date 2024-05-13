@@ -21,6 +21,7 @@ const Stack = createStackNavigator();
 const RewardStack = createStackNavigator();
 const CourseStack = createStackNavigator();
 
+
 function MainNavigator() {
     return (
         <Tab.Navigator screenOptions={{
@@ -149,6 +150,7 @@ function CourseStackNavigator2() {
                     headerLeft: () => <CustomBackButton onPress={() => navigation.goBack()} />,
                 })}
             />
+        {/* <CourseStack.Screen name="LoginScreen" component={LoginScreen}/> */}
         </CourseStack.Navigator>
     );
 }
@@ -170,6 +172,8 @@ function RewardStackNavigator() {
         </RewardStack.Navigator>
     );
 }
+
+
 
 const CustomBackButton = ({ onPress }) => {
     return (

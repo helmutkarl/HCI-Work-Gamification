@@ -15,9 +15,13 @@ import Menu, {MenuOptions,MenuOption,MenuTrigger,} from 'react-native-popup-menu
 export default ProfileScreen = ({ navigation, users}) => {
     const userProfile = usersData.find(user => user.id === activeUserId);
     const getCourseDetails = (courseId) => coursesData.find(course => course.id === courseId);
-
-
     const [filteredCourses, setFilteredCourses] = useState([]);
+
+    const selectOptionType = (value) => {
+        if (value === 'Back to Login') {
+            navigation.navigate('LoginScreen');
+        }
+    };
     
     useEffect(() => {
         const coursesData = userProfile.courses
@@ -33,7 +37,7 @@ export default ProfileScreen = ({ navigation, users}) => {
         <ImageBackground source={background} style={styles.backgroundContainer}>
 
             <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false} stickyHeaderIndices={[3]}>
-                    <Menu onSelect={value => this.selectOptionType(value)} style={styles.settingsContainer}>
+                    <Menu onSelect={selectOptionType} style={styles.settingsContainer}>
                         <MenuTrigger>
                             <Image source={require('../assets/icons/settings.png')} style={{ width: 30, height: 30}} />
                         </MenuTrigger>
@@ -41,7 +45,7 @@ export default ProfileScreen = ({ navigation, users}) => {
                         <View style={styles.settingsContainer}/>
                             <MenuOption value="Normal" disabled={true} text='Account Information' />
                             <MenuOption value="N/A" disabled={true} text='Notifications' />
-                            <MenuOption value={{ text: 'Back to Login' }} text='Logout' />
+                            <MenuOption value="Back to Login" text='Logout' />
                         </MenuOptions>
                     </Menu>
                 

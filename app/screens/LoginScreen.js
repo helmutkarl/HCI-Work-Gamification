@@ -9,7 +9,8 @@ import { useAuth } from '../components/AuthContext.js';
 import global from '../styles/global.styles.js';
 
 
-export default LoginScreen = () => {
+
+export default LoginScreen = ({navigation}) => {
     const authContext = useAuth();
     console.log(authContext);
     const { setIsLoggedIn } = useAuth();

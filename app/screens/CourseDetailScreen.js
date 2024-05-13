@@ -31,9 +31,16 @@ export default CourseDetailScreen = ({route}) => {
                             </View>
                 )}
                     </View>
+
                 <View style={styles.titleContainer}>
                     <Text style={styles.titleText}>{title}</Text>
                     <Text style={styles.subTitleText}>{subtitle}</Text>
+                    {status === "In Progress" &&
+                    <View>
+                        <View style={styles.progressLine}/>
+                        <View style={styles.progressLineFull}/>
+                    </View>
+                }
                     <Text style={styles.descriptionTitle}>Course Description</Text>
                     <Text style={styles.descriptionText}>{description}</Text>
                 </View>

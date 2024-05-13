@@ -19,7 +19,7 @@ export default StyleSheet.create({
         fontSize: 14,
         marginLeft: 8,
         fontWeight: '700',
-        marginBottom: 20,
+        marginBottom: 13,
     },
     courseTitle: {
         color: colors.titles,
@@ -27,6 +27,7 @@ export default StyleSheet.create({
         marginLeft: 8,
         fontWeight: '900',
         marginBottom: 5,
+        marginTop: 13,
     },
     courseSubTitle: {
         color: colors.titles,
@@ -43,13 +44,20 @@ export default StyleSheet.create({
         fontSize: 16,
         fontWeight: '900'
     },
+
+    progressLineContainer: {
+        borderTopWidth: 3,
+        marginTop: 28,
+        width: 230,
+        marginLeft: 8,
+    },
+
     progressLine: {
         opacity: 0.3,
         height: 3,
         borderTopWidth: 3,
         borderColor: '#27476E',
         borderStyle: "solid",
-        marginTop: 28,
         width: 230,
         marginLeft: 8,
         position: "absolute",
@@ -59,7 +67,6 @@ export default StyleSheet.create({
         borderTopWidth: 3,
         borderColor: '#27476E',
         borderStyle: "solid",
-        marginTop: 28,
         width: 150,
         marginLeft: 8,
         position: "absolute",
@@ -77,6 +84,7 @@ export default StyleSheet.create({
         //flexDirection: 'row',
         alignItems: 'right',
         justifyContent: "right",
+        marginBottom: -10,
     },
     statusTagsText: {
         color: '#27476E',

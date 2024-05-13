@@ -94,13 +94,14 @@ export default StyleSheet.create({
         marginLeft: 8,
         marginTop: 8,
         fontWeight: '500',
+        marginBottom: 20,
     },
 
     descriptionText: {
         color: colors.text,
         fontSize: 16,
         marginLeft: 8,
-        marginTop: 30,
+        marginTop: 25,
         fontWeight: '500',
     },
 
@@ -108,7 +109,7 @@ export default StyleSheet.create({
         color: colors.text,
         fontSize: 18,
         marginLeft: 8,
-        marginTop: 30,
+        marginTop: 35,
         fontWeight: '700',
     },
 
@@ -142,7 +143,25 @@ export default StyleSheet.create({
         textAlign: 'center',
         position: 'absolute',
         top: '36%',
-       // left: '50%',
-       // transform: [{ translateX: -85}, { translateY: -15 }],
+    },
+        
+    progressLine: {
+        opacity: 0.3,
+        height: 3,
+        borderTopWidth: 3,
+        borderColor: '#27476E',
+        borderStyle: "solid",
+        width: 372,
+        marginLeft: 8,
+        position: "absolute",
+    },
+    progressLineFull: {
+        height: 3,
+        borderTopWidth: 3,
+        borderColor: '#27476E',
+        borderStyle: "solid",
+        width: 250,
+        marginLeft: 8,
+        position: "absolute",
     },
 });
