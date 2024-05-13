@@ -61,7 +61,7 @@ function MainNavigator() {
                 ),
                 headerShown: false,
             }} />
-            <Tab.Screen name="Profile" component={ProfileScreen} options={{
+            <Tab.Screen name="Profile" component={CourseStackNavigator2} options={{
                 tabBarIcon: ({ focused, size }) => (
                     <Image
                         source={focused ? require('../assets/icons/menu_user_full.png') : require('../assets/icons/menu_user_empty.png')}
@@ -124,6 +124,24 @@ function CourseStackNavigator() {
             <CourseStack.Screen
                 name="CourseDetailScreen"
                 component={CourseDetailScreen} // Ensure this is defined or imported if you use it
+                options={({ navigation }) => ({
+                    headerBackTitleVisible: false,
+                    headerTransparent: true,
+                    headerTitle: '',
+                    headerLeft: () => <CustomBackButton onPress={() => navigation.goBack()} />,
+                })}
+            />
+        </CourseStack.Navigator>
+    );
+}
+
+function CourseStackNavigator2() {
+    return (
+        <CourseStack.Navigator>
+            <CourseStack.Screen name="ProfileScreen" component={ProfileScreen} options={{ headerShown: false }} />
+            <CourseStack.Screen
+                name="CourseDetailScreen"
+                component={CourseDetailScreen}
                 options={({ navigation }) => ({
                     headerBackTitleVisible: false,
                     headerTransparent: true,
