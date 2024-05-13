@@ -19,10 +19,11 @@ export default CourseCatalogueScreen = ({ navigation }) => {
         setFilteredCourses(filteredCourses);
     };
 
+
     return (
         <ImageBackground source={background} style={styles.backgroundContainer}>
            
-            <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false} stickyHeaderIndices={[2, 3]}>
+            <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false}>
             <View style={styles.titleContainer}>
                 <Text style={styles.titleText}>Course Catalogue</Text>
                 <Text style={styles.subTitleText}>Explore all our trainings here!</Text>

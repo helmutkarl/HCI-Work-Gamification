@@ -37,7 +37,7 @@ export default ProfileScreen = ({ navigation, users}) => {
                     <Text style={styles.titleText}>{userProfile.name}</Text>
                     <Text style={styles.subTitleText}>{userProfile.role}</Text>
                 </View>
-                <View>
+                <View style={{paddingTop:40}}>
                     <StatusFilters users={[userProfile]}  userId={activeUserId} onPress={handleCoursesFilter}/>
                 </View>
                 {filteredCourses.map((courseProfile, index) => {
