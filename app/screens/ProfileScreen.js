@@ -36,7 +36,7 @@ export default ProfileScreen = ({ navigation, users}) => {
 
         <ImageBackground source={background} style={styles.backgroundContainer}>
 
-            <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false} stickyHeaderIndices={[3]}>
+            <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false} stickyHeaderIndices={[5]}>
                     <Menu onSelect={selectOptionType} style={styles.settingsContainer}>
                         <MenuTrigger>
                             <Image source={require('../assets/icons/settings.png')} style={{ width: 30, height: 30}} />
