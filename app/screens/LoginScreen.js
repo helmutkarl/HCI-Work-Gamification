@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, ScrollView, TouchableOpacity, Text, ImageBackground, TextInput, Alert } from 'react-native';
+import { View, ScrollView, TouchableOpacity, Text, ImageBackground, TextInput, Alert , Image, TextInputWithIcon} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import colors from '../config/colors.js';
@@ -36,21 +36,28 @@ export default LoginScreen = () => {
             source={background}
             style={styles.backgroundContainer}>
             <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false}>
-                <View style={styles.container}>
+                <View style={styles.titleContainer}>
+                    <Text style={styles.titleText}>Get Started!</Text>
+                    <Text style={styles.subTitleText}>Please Sign in with your Work Account</Text>
+                </View>
+                <View>
                     <TextInput
                         value={username}
                         onChangeText={setUsername}
-                        placeholder="Username" />
+                        placeholder="Email" 
+                        style={styles.textInput}/>
                     <TextInput
                         value={password}
                         onChangeText={setPassword}
                         placeholder="Password"
-                        secureTextEntry />
-                    <TouchableOpacity style={styles.button} onPress={handleLogin}>
-                        <Text style={styles.buttonText}>Sign In</Text>
-                        <Icon name='keyboard-arrow-right' size={24} color={colors.white} />
-                    </TouchableOpacity>
+                        secureTextEntry 
+                        style={styles.textInput}/>
                 </View>
+                    <TouchableOpacity style={styles.ctaContainer} onPress={handleLogin}>
+                    <Image source={require('../assets/icons/cta_button.png')} style={{ width: 350, }} resizeMode='contain' />
+                    <Text style={styles.ctaText}>Sign In</Text>
+                    </TouchableOpacity>
+
                 <View style={{ height: 64 }}></View>
             </ScrollView>
         </ImageBackground>

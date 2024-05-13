@@ -9,17 +9,18 @@ import { activeUserId } from '../config/config.js';
 import CourseCard from '../components/CourseCard';
 import ProfileStats from '../components/ProfileStats';
 import StatusFilters from '../components/StatusFilters.js';
-import Menu, {MenuProvider,MenuOptions,MenuOption,MenuTrigger,renderers,} from 'react-native-popup-menu';
+import Menu, {MenuOptions,MenuOption,MenuTrigger,} from 'react-native-popup-menu';
 
-let unique = 0;
-const { SlideInMenu } = renderers;
 
 export default ProfileScreen = ({ navigation, users}) => {
     const userProfile = usersData.find(user => user.id === activeUserId);
     const getCourseDetails = (courseId) => coursesData.find(course => course.id === courseId);
 
+
     const [filteredCourses, setFilteredCourses] = useState([]);
+    
     useEffect(() => {
+        const coursesData = userProfile.courses
         setFilteredCourses(coursesData);
     }, []);
 

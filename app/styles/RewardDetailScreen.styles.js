@@ -111,7 +111,5 @@ export default StyleSheet.create({
         textAlign: 'center',
         position: 'absolute',
         top: '36%',
-       // left: '50%',
-       // transform: [{ translateX: -85}, { translateY: -15 }],
     },
 });
