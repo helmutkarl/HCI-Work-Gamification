@@ -9,7 +9,10 @@ import { activeUserId } from '../config/config.js';
 import CourseCard from '../components/CourseCard';
 import ProfileStats from '../components/ProfileStats';
 import StatusFilters from '../components/StatusFilters.js';
+import Menu, {MenuProvider,MenuOptions,MenuOption,MenuTrigger,renderers,} from 'react-native-popup-menu';
 
+let unique = 0;
+const { SlideInMenu } = renderers;
 
 export default ProfileScreen = ({ navigation, users}) => {
     const userProfile = usersData.find(user => user.id === activeUserId);
@@ -25,8 +28,22 @@ export default ProfileScreen = ({ navigation, users}) => {
     };
 
     return (
+
         <ImageBackground source={background} style={styles.backgroundContainer}>
+
             <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false} stickyHeaderIndices={[3]}>
+                    <Menu onSelect={value => this.selectOptionType(value)} style={styles.settingsContainer}>
+                        <MenuTrigger>
+                            <Image source={require('../assets/icons/settings.png')} style={{ width: 30, height: 30}} />
+                        </MenuTrigger>
+                        <MenuOptions customStyles={{optionText: styles.settingsText }}>
+                        <View style={styles.settingsContainer}/>
+                            <MenuOption value="Normal" disabled={true} text='Account Information' />
+                            <MenuOption value="N/A" disabled={true} text='Notifications' />
+                            <MenuOption value={{ text: 'Back to Login' }} text='Logout' />
+                        </MenuOptions>
+                    </Menu>
+                
                 <View style={styles.profileImageContainer}>
                     <Image
                         source={{ uri: userProfile.image }}
@@ -41,6 +58,7 @@ export default ProfileScreen = ({ navigation, users}) => {
                     <Text style={styles.titleText}>{userProfile.name}</Text>
                     <Text style={styles.subTitleText}>{userProfile.role}</Text>
                 </View>
+
                 <View style={{paddingTop: 40}}>
                     <StatusFilters users={[userProfile]}  userId={activeUserId} onPress={handleCoursesFilter}/>
                 </View>

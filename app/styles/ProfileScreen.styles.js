@@ -14,6 +14,16 @@ export default StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
     },
+
+    settingsContainer: {
+        marginTop: 50,
+        right: 30,
+        //backgroundColor: colors.primary,
+        alignItems: 'right',
+        selfAlign: 'right',
+        position: 'absolute',
+    },
+    
     tagContainer: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -62,11 +72,20 @@ export default StyleSheet.create({
         color: colors.titles,
         fontSize: 16,
         marginLeft: 8,
-        fontWeight: '500'
+        fontWeight: '500',
+        alignSelf: 'center',
     },
     tagsText: {
         color: colors.secondary,
         fontSize: 16,
         fontWeight: '700'
+    },
+
+    settingsText: {
+        color: colors.titles,
+        fontSize: 16,
+        marginLeft: 8,
+        fontWeight: '500',
+        marginVertical: 11,
     },
 });

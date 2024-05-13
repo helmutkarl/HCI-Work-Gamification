@@ -2,6 +2,7 @@ import { React, useState } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import styles from '../styles/Filters.styles';
 
+
 export default StatusFilters = ({users, userId, onPress}) => {
 
         const [selectedTag, setSelectedTag] = useState("All");
@@ -32,6 +33,7 @@ export default StatusFilters = ({users, userId, onPress}) => {
                 onPress(filteredCourses);
         };
     return (
+        
         <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
