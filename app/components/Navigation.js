@@ -7,6 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 import CourseCatalogueScreen from '../screens/CourseCatalogueScreen.js';
+import CourseDetailScreen from '../screens/CourseDetailScreen.js';
 import LeaderboardScreen from '../screens/LeaderboardScreen.js';
 import RewardsScreen from '../screens/RewardsScreen.js';
 import ProfileScreen from '../screens/ProfileScreen.js';
@@ -33,7 +34,7 @@ function MainNavigator() {
                 elevation: 0,
             }
         }}>
-            <Tab.Screen name="Courses" component={CourseCatalogueScreen} options={{
+            <Tab.Screen name="Courses" component={CourseStackNavigator} options={{
                 tabBarIcon: ({ focused, size }) => (
                     <Image
                         source={focused ? require('../assets/icons/menu_rocket_full.png') : require('../assets/icons/menu_rocket_empty.png')}

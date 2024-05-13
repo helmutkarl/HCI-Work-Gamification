@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
 import colors from '../config/colors';
 
+
+
 export default StyleSheet.create({
     backgroundContainer: {
         flex: 1,
@@ -26,8 +28,58 @@ export default StyleSheet.create({
         paddingHorizontal: 10,
         //backgroundColor: colors.primary,
         flexDirection: 'column',
-        alignItems: 'left,'
+        alignItems: 'left',
+        paddingRight: 20,
     },
+
+    tagContainer: {
+        marginLeft: 13,
+        flexDirection: 'row',
+        alignItems: 'left',
+        justifyContent: 'left',
+        paddingVertical: 10,
+    },
+
+    tags: {
+        margin: 5,
+        paddingHorizontal: 18,
+        paddingVertical: 5,
+        borderRadius: 15,
+        elevation: 5,
+        shadowRadius: 12,
+        overflow: "hidden",
+        backgroundColor: '#f8f7d8',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: "center",
+    },
+
+    tagsText: {
+        color: colors.secondary,
+        fontSize: 14,
+        fontWeight: '700'
+    },
+
+    tags2: {
+        margin: 5,
+        paddingHorizontal: 18,
+        paddingVertical: 5,
+        borderRadius: 15,
+        elevation: 5,
+        shadowRadius: 12,
+        overflow: "hidden",
+        backgroundColor: colors.accent_green,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: "center",
+    },
+
+    tagsText2: {
+        color: colors.titles,
+        fontSize: 14,
+        fontWeight: '700'
+    },
+
 
     titleText: {
         color: colors.titles,
@@ -50,6 +102,14 @@ export default StyleSheet.create({
         marginLeft: 8,
         marginTop: 30,
         fontWeight: '500',
+    },
+
+    descriptionTitle: {
+        color: colors.text,
+        fontSize: 18,
+        marginLeft: 8,
+        marginTop: 30,
+        fontWeight: '700',
     },
 
     benefitsContainer: {

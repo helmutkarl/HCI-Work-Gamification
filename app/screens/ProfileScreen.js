@@ -37,7 +37,7 @@ export default ProfileScreen = ({ navigation, users}) => {
                     <Text style={styles.titleText}>{userProfile.name}</Text>
                     <Text style={styles.subTitleText}>{userProfile.role}</Text>
                 </View>
-                <View style={{paddingTop:40}}>
+                <View style={{paddingTop: 40}}>
                     <StatusFilters users={[userProfile]}  userId={activeUserId} onPress={handleCoursesFilter}/>
                 </View>
                 {filteredCourses.map((courseProfile, index) => {
@@ -48,9 +48,22 @@ export default ProfileScreen = ({ navigation, users}) => {
                             course={{
                                 ...course,
                                 image: { uri: course.image },
-                                status: courseProfile.status
+                                status: courseProfile.status,
+                                title: course.title,
+                                type: course.type,
+                                category: course.category,
+                                subtitle: course.subtitle,
+                                description: course.description,
                             }}
-                            onPress={() => navigation.navigate('CourseDetailScreen', { course })}
+                            onPress={() => navigation.navigate('CourseDetailScreen', { 
+                                status: courseProfile.status, 
+                                image : course.image,                             
+                                title: course.title,
+                                type: course.type,
+                                category: course.category,
+                                subtitle: course.subtitle,
+                                description: course.description,
+                            })}
                         />
                     );
                 })}

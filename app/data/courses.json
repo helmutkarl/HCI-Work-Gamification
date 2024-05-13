@@ -5,7 +5,8 @@
         "type": "Online Classroom",
         "category": "IT",
         "title": "Power BI",
-        "subtitle": "22.05.2023 | 6 h | 250 XP"
+        "subtitle": "22.05.2023 | 6 h | 250 XP",
+        "description": "Learn how to connect to data sources, transform data efficiently, optimize query performance, automate workflows, and apply your skills to real-world scenarios. By the end of this course, you'll be equipped to extract actionable insights from your data with confidence and efficiency. Join us on this journey to mastering Excel Power Query and take your data analysis skills to the next level!"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "type": "e-Learning",
         "category": "IT",
         "title": "Excel",
-        "subtitle": "Available Now | 4 h | 200 XP"
+        "subtitle": "Available Now | 4 h | 200 XP",
+        "description": "Description"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "type": "e-Learning",
         "category": "IT",
         "title": "Excel Advanced",
-        "su,btitle": "Available Now | 5 h | 250 XP"
+        "su,btitle": "Available Now | 5 h | 250 XP",
+        "description": "Description"
     },
     {
         "id": 4,
@@ -29,7 +32,9 @@
         "type": "e-Learning",
         "category": "IT",
         "title": "Excel Advanced",
-        "subtitle": "Available Now | 5 h | 250 XP"
+        "subtitle": "Available Now | 5 h | 250 XP",
+        "description": "Description"
+
     },
     {
         "id": 5,
@@ -37,7 +42,8 @@
         "type": "In person",
         "category": "IT",
         "title": "Excel Advanced",
-        "subtitle": "Available Now | 5 h | 250 XP"
+        "subtitle": "Available Now | 5 h | 250 XP",
+        "description": "Description"
     },
     {
         "id": 6,
@@ -45,6 +51,7 @@
         "type": "e-Learning",
         "category": "Management",
         "title": "Project Management",
-        "subtitle": "Available Now | 5 h | 250 XP"
+        "subtitle": "Available Now | 5 h | 250 XP",
+        "description": "Description"
     }
 ]

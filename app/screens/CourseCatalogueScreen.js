@@ -44,9 +44,21 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                         key={index}
                         course={{
                             ...course,
-                            image: { uri: course.image }
+                            image: { uri: course.image },
+                            title: course.title,
+                            type: course.type,
+                            category: course.category,
+                            subtitle: course.subtitle,
+                            description: course.description,
                         }}
-                        onPress={() => navigation.navigate('CourseDetailScreen', { image: imageURL })}
+                        onPress={() => navigation.navigate('CourseDetailScreen', {
+                            image : course.image,                             
+                            title: course.title,
+                            type: course.type,
+                            category: course.category,
+                            subtitle: course.subtitle,
+                            description: course.description,
+                        })}
                     />
                 ))}
                 <View style={{ height: 64 }}></View>
