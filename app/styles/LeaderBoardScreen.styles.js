@@ -19,14 +19,16 @@ export default StyleSheet.create({
         color: colors.titles,
         fontSize: 32,
         marginLeft: 8,
-        fontWeight: '900'
+        fontWeight: '900',
+        fontFamily: 'Montserrat-Semibold'
     },
 
     subTitleText: {
         color: colors.titles,
         fontSize: 16,
         marginLeft: 8,
-        fontWeight: '500'
+        fontWeight: '500',
+        fontFamily: 'OpenSans-Light'
     },
 
     leadersContainer: {
@@ -59,7 +61,8 @@ export default StyleSheet.create({
         marginLeft: 300,
         marginTop: -64,
         fontWeight: '900',
-        position: 'absolute'
+        position: 'absolute',
+        fontFamily: 'Montserrat-Bold'
     },
 
     xps: {
@@ -69,6 +72,7 @@ export default StyleSheet.create({
         marginLeft: 12,
         fontWeight: '900',
         marginBottom: 5,
+        fontFamily: 'Montserrat-Bold'
     },
 
     name: {
@@ -77,11 +81,13 @@ export default StyleSheet.create({
         marginLeft: 12,
         fontWeight: '900',
         marginBottom: 5,
+        fontFamily: 'OpenSans-Regular'
     },
     position: {
         color: colors.text,
         fontSize: 12,
         marginLeft: 12,
         marginTop: -5,
+        fontFamily: 'OpenSans-Regular'
     },
 });
