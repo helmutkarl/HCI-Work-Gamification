@@ -2,6 +2,8 @@
     {
         "id": 100001,
         "name": "Nicole Mayr",
+        "username": "nmayr",
+        "password": "1234",
         "role": "Talent Manager",
         "image": "https://drive.google.com/uc?export=view&id=12u9cFJUSXJ6h-GQ1Pq0nj7j23xWUREBv",
         "xp": 525,
@@ -37,6 +39,8 @@
     {
         "id": 100002,
         "name": "Anna-Louisa Winkler",
+        "username": "awinkler",
+        "password": "1234",
         "role": "Financial Analyst",
         "image": "https://drive.google.com/uc?export=view&id=12u9cFJUSXJ6h-GQ1Pq0nj7j23xWUREBv",
         "xp": 840,
@@ -68,6 +72,8 @@
     {
         "id": 100003,
         "name": "Petra Kabelbinder",
+        "username": "pkabelbinder",
+        "password": "1234",
         "role": "Operations Manager",
         "image": "https://drive.google.com/uc?export=view&id=12u9cFJUSXJ6h-GQ1Pq0nj7j23xWUREBv",
         "xp": 1130,
@@ -99,6 +105,8 @@
     {
         "id": 100004,
         "name": "Louis Mender",
+        "username": "lmender",
+        "password": "1234",
         "role": "Janitor",
         "image": "https://drive.google.com/uc?export=view&id=12u9cFJUSXJ6h-GQ1Pq0nj7j23xWUREBv",
         "xp": 600,
@@ -130,6 +138,8 @@
     {
         "id": 100005,
         "name": "Stefan Holzinger",
+        "username": "sholzinger",
+        "password": "1234",
         "role": "Public Relations",
         "image": "https://drive.google.com/uc?export=view&id=12u9cFJUSXJ6h-GQ1Pq0nj7j23xWUREBv",
         "xp": 400,

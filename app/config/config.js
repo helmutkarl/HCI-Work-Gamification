@@ -1,1 +1,0 @@
-export const activeUserId = 100001;
