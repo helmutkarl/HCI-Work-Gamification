@@ -19,6 +19,7 @@ export default StyleSheet.create({
         color: 'white',
         fontSize: 32,
         color: colors.titles,
+        fontFamily: 'Montserrat-Semibold',
     },
     activeDotStyle: {
         backgroundColor: colors.primary,
