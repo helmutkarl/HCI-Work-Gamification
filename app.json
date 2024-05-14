@@ -16,14 +16,14 @@
         "expo-font",
         {
           "fonts":[
-            "./assets/fonts/Open_Sans/OpenSans-SemiBold.ttf",
-            "./assets/fonts/Open_Sans/OpenSans-Regular.ttf",
-            "./assets/fonts/Open_Sans/OpenSans-Light.ttf",
-            "./assets/fonts/Open_Sans/OpenSans-Bold.ttf",
-            "./assets/fonts/Montserrat/Montserrat-Regular.ttf",
-            "./assets/fonts/Montserrat/Montserrat-Light.ttf",
-            "./assets/fonts/Montserrat/Montserrat-Bold.ttf",
-            "./assets/fonts/Montserrat/Montserrat-SemiBold.ttf"
+            "./app/assets/fonts/Open_Sans/OpenSans-SemiBold.ttf",
+            "./app/assets/fonts/Open_Sans/OpenSans-Regular.ttf",
+            "./app/assets/fonts/Open_Sans/OpenSans-Light.ttf",
+            "./app/assets/fonts/Open_Sans/OpenSans-Bold.ttf",
+            "./app/assets/fonts/Montserrat/Montserrat-Regular.ttf",
+            "./app/assets/fonts/Montserrat/Montserrat-Light.ttf",
+            "./app/assets/fonts/Montserrat/Montserrat-Bold.ttf",
+            "./app/assets/fonts/Montserrat/Montserrat-SemiBold.ttf"
           ]
         }
       ]
