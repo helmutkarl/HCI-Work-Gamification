@@ -62,7 +62,8 @@ export default StyleSheet.create({
         color: colors.titles,
         fontSize: 32,
         marginLeft: 8,
-        fontWeight: '900'
+        fontWeight: '900',
+        fontFamily: 'Montserrat-Semibold'
     },
 
     subTitleText: {
@@ -71,6 +72,7 @@ export default StyleSheet.create({
         marginLeft: 8,
         marginTop: 8,
         fontWeight: '500',
+        fontFamily: 'OpenSans-Light'
     },
 
     descriptionText: {
@@ -79,6 +81,7 @@ export default StyleSheet.create({
         marginLeft: 8,
         marginTop: 30,
         fontWeight: '500',
+        fontFamily: 'OpenSans-Regular'
     },
 
     benefitsContainer: {
@@ -94,6 +97,7 @@ export default StyleSheet.create({
         marginTop: 30,
         marginBottom: 10,
         fontWeight: '700',
+        fontFamily: 'OpenSans-Bold'
     },
 
     benefitsText: {
@@ -102,6 +106,7 @@ export default StyleSheet.create({
         marginLeft: 8,
         marginTop: 10,
         fontWeight: '500',
+        fontFamily: 'OpenSans-Semibold'
     },
 
     ctaText: {
@@ -111,5 +116,6 @@ export default StyleSheet.create({
         textAlign: 'center',
         position: 'absolute',
         top: '36%',
+        fontFamily: 'Montserrat-Semibold'
     },
 });
