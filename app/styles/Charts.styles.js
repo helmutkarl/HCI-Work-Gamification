@@ -24,6 +24,7 @@ chartNumber: {
     position: 'absolute',
     alignSelf: 'center',
     top: '30%',
+    fontFamily: 'Montserrat-Semibold'
 },
 
 chartText: {
@@ -33,5 +34,6 @@ chartText: {
     textAlign: 'center',
     position: 'absolute',
     top: '60%',
+    fontFamily: 'Montserrat-Regular'
 },
 });
