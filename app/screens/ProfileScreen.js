@@ -9,13 +9,20 @@ import { activeUserId } from '../config/config.js';
 import CourseCard from '../components/CourseCard';
 import ProfileStats from '../components/ProfileStats';
 import StatusFilters from '../components/StatusFilters.js';
+import Charts from '../components/Charts.js';
 import Menu, {MenuOptions,MenuOption,MenuTrigger,} from 'react-native-popup-menu';
 
 
-export default ProfileScreen = ({ navigation, users}) => {
+export default ProfileScreen = ({ navigation }) => {
     const userProfile = usersData.find(user => user.id === activeUserId);
     const getCourseDetails = (courseId) => coursesData.find(course => course.id === courseId);
     const [filteredCourses, setFilteredCourses] = useState([]);
+
+    useEffect(() => {
+        if (userProfile) {
+            setFilteredCourses(userProfile.courses);
+        }
+    }, [userProfile]);
 
     const selectOptionType = (value) => {
         if (value === 'Back to Login') {
@@ -63,24 +70,8 @@ export default ProfileScreen = ({ navigation, users}) => {
                     <Text style={styles.titleText}>{userProfile.name}</Text>
                     <Text style={styles.subTitleText}>{userProfile.role}</Text>
                 </View>
-                <View style={styles.chartContainerAll}>
-                    <View style={styles.chartContainer}>
-                        <Image source={require('../assets/icons/chart_1.png')} style={{ width: 115, height: 115}} />
-                        <Text style={styles.chartNumber}>2</Text>
-                        <Text style={styles.chartText}>Registered</Text>
-                    </View>
-                    <View style={styles.chartContainer}>
-                        <Image source={require('../assets/icons/chart_2.png')} style={{ width: 115, height: 115}} />
-                        <Text style={styles.chartNumber}>1</Text>
-                        <Text style={styles.chartText}>In Progress</Text>
-                    </View>
-                    <View style={styles.chartContainer}>
-                        <Image source={require('../assets/icons/chart_3.png')} style={{ width: 115, height: 115}} />
-                        <Text style={styles.chartNumber}>2</Text>
-                        <Text style={styles.chartText}>Completed</Text>
-                    </View>
-                </View>
-                <View style={{paddingTop: 15}}>
+                <Charts userProfile={userProfile} />
+                <View style={{paddingTop: 35}}>
                     <StatusFilters users={[userProfile]}  userId={activeUserId} onPress={handleCoursesFilter}/>
                 </View>
                 {filteredCourses.map((courseProfile, index) => {
