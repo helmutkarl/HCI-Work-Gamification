@@ -22,12 +22,14 @@ export default StyleSheet.create({
     titleText: {
         color: colors.titles,
         fontSize: 32,
-        fontWeight: '900'
+        fontWeight: '900',
+        fontFamily: 'Montserrat-Semibold'
     },
     subTitleText: {
         color: colors.titles,
         fontSize: 16,
-        fontWeight: '500'
+        fontWeight: '500',
+        fontFamily: 'OpenSans-Light'
     },
     textInput: {
         marginTop: 10,
@@ -38,6 +40,7 @@ export default StyleSheet.create({
         borderRadius: 12,
         elevation: 5,
         shadowRadius: 12,
+        fontFamily: 'OpenSans-Semibold'
     },
     container: {
         flex: 1,
@@ -78,5 +81,6 @@ export default StyleSheet.create({
         textAlign: 'center',
         position: 'absolute',
         top: '36%',
+        fontFamily: 'Montserrat-Semibold'
     }
 });
