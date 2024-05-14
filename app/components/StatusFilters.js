@@ -3,9 +3,13 @@ import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import styles from '../styles/Filters.styles';
 
 
-export default StatusFilters = ({users, userId, onPress}) => {
+export default StatusFilters = ({users, userId, onPress,}) => {
+        const user = users.find(user => user.id === userId);
 
         const [selectedTag, setSelectedTag] = useState("All");
+        const [filteredCount, setFilteredCount] = useState(user ? user.courses.length : 0);
+
+
     
         const tags = ["All", "Registered", "In Progress", "Completed"]; 
         const handleTagPress = (tag) => {
@@ -30,6 +34,7 @@ export default StatusFilters = ({users, userId, onPress}) => {
                         filteredCourses = [];
                         break;
                 }
+                setFilteredCount(filteredCourses.length);
                 onPress(filteredCourses);
         };
     return (
@@ -47,7 +52,7 @@ export default StatusFilters = ({users, userId, onPress}) => {
                             styles.tags,
                             selectedTag === tag && styles.tagsSelected
                         ]}>
-                        <Text style={[styles.tagsText, selectedTag === tag && styles.tagsTextSelected]}>{tag}</Text>
+                        <Text style={[styles.tagsText, selectedTag === tag && styles.tagsTextSelected]}>{tag} {selectedTag === tag && `(${filteredCount})`}</Text>
                         </TouchableOpacity>
                 ))}
             </View>

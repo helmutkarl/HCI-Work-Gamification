@@ -5,6 +5,7 @@ import styles from '../styles/Filters.styles';
 export default TypeFilters = ({onPress, courses}) => {
 
         const [selectedTag, setSelectedTag] = useState("All");
+        const [filteredCount, setFilteredCount] = useState(courses.length);
     
         const tags = ["All", "Online Classroom", "e-Learning", "In person"];
     
@@ -18,6 +19,7 @@ export default TypeFilters = ({onPress, courses}) => {
                 default:
                     filteredCourses = courses.filter(course => course.type === tag);
             }
+            setFilteredCount(filteredCourses.length);
             onPress(filteredCourses);
         };
 
@@ -35,7 +37,7 @@ export default TypeFilters = ({onPress, courses}) => {
                             styles.tags,
                             selectedTag === tag && styles.tagsSelected
                         ]}>
-                        <Text style={[styles.tagsText, selectedTag === tag && styles.tagsTextSelected]}>{tag}</Text>
+                        <Text style={[styles.tagsText, selectedTag === tag && styles.tagsTextSelected]}>{tag} {selectedTag === tag && `(${filteredCount})`}</Text>
                         </TouchableOpacity>
                 ))}
             </View>
