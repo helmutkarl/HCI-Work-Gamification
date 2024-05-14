@@ -23,36 +23,6 @@ export default StyleSheet.create({
         selfAlign: 'right',
         position: 'absolute',
     },
-
-    chartContainerAll: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: "center",
-    },
-
-    chartContainer: {
-        alignItems: 'center',
-        justifyContent: "center",
-        paddingHorizontal: 5,
-    },
-
-    chartNumber: {
-        color: colors.titles,
-        fontSize: 30,
-        fontWeight: '600',
-        textAlign: 'center',
-        position: 'absolute',
-        top: '30%',
-    },
-
-    chartText: {
-        color: colors.titles,
-        fontSize: 12,
-        fontWeight: '500',
-        textAlign: 'center',
-        position: 'absolute',
-        top: '60%',
-    },
     
     tagContainer: {
         flexDirection: 'row',

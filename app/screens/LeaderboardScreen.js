@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, ScrollView, Text, ImageBackground, Image } from 'react-native';
 
-//Person images need to imported in same size and bigger//
 
 import background from '../assets/images/background.png';
 import styles from '../styles/LeaderBoardScreen.styles.js';

@@ -19,7 +19,6 @@ export default StyleSheet.create({
         color: colors.titles,
         fontSize: 32,
         marginLeft: 8,
-        fontWeight: '900',
         fontFamily: 'Montserrat-Semibold'
     },
 
@@ -27,7 +26,6 @@ export default StyleSheet.create({
         color: colors.titles,
         fontSize: 16,
         marginLeft: 8,
-        fontWeight: '500',
         fontFamily: 'OpenSans-Light'
     },
 
@@ -60,7 +58,6 @@ export default StyleSheet.create({
         fontSize: 100,
         marginLeft: 300,
         marginTop: -64,
-        fontWeight: '900',
         position: 'absolute',
         fontFamily: 'Montserrat-Bold'
     },
@@ -70,7 +67,6 @@ export default StyleSheet.create({
         fontSize: 24,
         marginTop: 45,
         marginLeft: 12,
-        fontWeight: '900',
         marginBottom: 5,
         fontFamily: 'Montserrat-Bold'
     },
@@ -79,7 +75,6 @@ export default StyleSheet.create({
         color: colors.text,
         fontSize: 16,
         marginLeft: 12,
-        fontWeight: '900',
         marginBottom: 5,
         fontFamily: 'OpenSans-Regular'
     },

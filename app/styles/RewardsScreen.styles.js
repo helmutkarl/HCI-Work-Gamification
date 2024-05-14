@@ -18,7 +18,6 @@ export default StyleSheet.create({
         marginTop: 50,
         paddingHorizontal: 10,
         paddingVertical: 20,
-        //backgroundColor: colors.primary,
         flexDirection: 'column',
         alignItems: 'left',
     },
