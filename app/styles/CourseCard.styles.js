@@ -28,12 +28,14 @@ export default StyleSheet.create({
         fontWeight: '900',
         marginBottom: 5,
         marginTop: 13,
+        fontFamily: 'Montserrat-Semibold'
     },
     courseSubTitle: {
         color: colors.titles,
         fontSize: 14,
         left: 8,
         fontWeight: '500',
+        fontFamily: 'OpenSans-Light'
     },
     image: {
         height: 100,
