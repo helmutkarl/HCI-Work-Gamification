@@ -27,14 +27,16 @@ export default StyleSheet.create({
         color: colors.titles,
         fontSize: 32,
         marginLeft: 8,
-        fontWeight: '900'
+        fontWeight: '900',
+        fontFamily: 'Montserrat-Semibold'
     },
 
     subTitleText: {
         color: colors.titles,
         fontSize: 16,
         marginLeft: 8,
-        fontWeight: '500'
+        fontWeight: '500',
+        fontFamily: 'OpenSans-Light'
     },
     contentContainer: {
         paddingBottom: 64,
