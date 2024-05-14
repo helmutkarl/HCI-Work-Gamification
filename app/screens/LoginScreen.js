@@ -8,7 +8,7 @@ import { useAuth } from '../components/AuthContext.js';
 import global from '../styles/global.styles.js';
 
 
-export default LoginScreen = ({ navigation }) => {
+export default LoginScreen = () => {
     const { login } = useAuth();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -44,7 +44,6 @@ export default LoginScreen = ({ navigation }) => {
                     <Image source={require('../assets/icons/cta_button.png')} style={{ width: 350, }} resizeMode='contain' />
                     <Text style={styles.ctaText}>Sign In</Text>
                 </TouchableOpacity>
-
                 <View style={{ height: 64 }}></View>
             </ScrollView>
         </ImageBackground>

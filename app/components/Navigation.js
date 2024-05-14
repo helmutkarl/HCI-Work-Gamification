@@ -150,7 +150,6 @@ function CourseStackNavigator2() {
                     headerLeft: () => <CustomBackButton onPress={() => navigation.goBack()} />,
                 })}
             />
-        {/* <CourseStack.Screen name="LoginScreen" component={LoginScreen}/> */}
         </CourseStack.Navigator>
     );
 }

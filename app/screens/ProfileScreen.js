@@ -25,7 +25,6 @@ export default ProfileScreen = ({ navigation }) => {
     const selectOptionType = (value) => {
         if (value === 'Back to Login') {
             logout();
-            navigation.navigate('LoginScreen');
         }
     };
 

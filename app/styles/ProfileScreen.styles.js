@@ -10,7 +10,6 @@ export default StyleSheet.create({
         marginTop: 50,
         paddingHorizontal: 10,
         paddingVertical: 10,
-        //backgroundColor: colors.primary,
         flexDirection: 'column',
         alignItems: 'center',
     },
@@ -18,7 +17,6 @@ export default StyleSheet.create({
     settingsContainer: {
         marginTop: 50,
         right: 30,
-        //backgroundColor: colors.primary,
         alignItems: 'right',
         selfAlign: 'right',
         position: 'absolute',
@@ -45,7 +43,6 @@ export default StyleSheet.create({
     titleContainer: {
         paddingHorizontal: 10,
         paddingVertical: 20,
-        //backgroundColor: colors.primary,
         flexDirection: 'column',
         alignItems: 'center',
     },
@@ -90,6 +87,6 @@ export default StyleSheet.create({
         marginLeft: 8,
         fontWeight: '500',
         marginVertical: 11,
-        fontFamily: 'Montserrat-Semibold'
+        fontFamily: 'Montserrat-Regular'
     },
 });
