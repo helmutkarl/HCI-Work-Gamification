@@ -11,6 +11,23 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "plugins":[
+      [
+        "expo-font",
+        {
+          "fonts":[
+            "./assets/fonts/Open_Sans/OpenSans-SemiBold.ttf",
+            "./assets/fonts/Open_Sans/OpenSans-Regular.ttf",
+            "./assets/fonts/Open_Sans/OpenSans-Light.ttf",
+            "./assets/fonts/Open_Sans/OpenSans-Bold.ttf",
+            "./assets/fonts/Montserrat/Montserrat-Regular.ttf",
+            "./assets/fonts/Montserrat/Montserrat-Light.ttf",
+            "./assets/fonts/Montserrat/Montserrat-Bold.ttf",
+            "./assets/fonts/Montserrat/Montserrat-SemiBold.ttf"
+          ]
+        }
+      ]
+    ],
     "ios": {
       "supportsTablet": true
     },
