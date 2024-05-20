@@ -55,14 +55,13 @@ export default StyleSheet.create({
     tagsText: {
         color: colors.secondary,
         fontSize: 14,
-        fontWeight: '700'
+        fontFamily: 'OpenSans-Semibold'
     },
 
     titleText: {
         color: colors.titles,
         fontSize: 32,
         marginLeft: 8,
-        fontWeight: '900',
         fontFamily: 'Montserrat-Semibold'
     },
 
@@ -71,7 +70,6 @@ export default StyleSheet.create({
         fontSize: 18,
         marginLeft: 8,
         marginTop: 8,
-        fontWeight: '500',
         fontFamily: 'OpenSans-Light'
     },
 
@@ -80,7 +78,6 @@ export default StyleSheet.create({
         fontSize: 16,
         marginLeft: 8,
         marginTop: 30,
-        fontWeight: '500',
         fontFamily: 'OpenSans-Regular'
     },
 
@@ -96,7 +93,6 @@ export default StyleSheet.create({
         marginLeft: 8,
         marginTop: 30,
         marginBottom: 10,
-        fontWeight: '700',
         fontFamily: 'OpenSans-Bold'
     },
 
@@ -105,14 +101,12 @@ export default StyleSheet.create({
         fontSize: 16,
         marginLeft: 8,
         marginTop: 10,
-        fontWeight: '500',
         fontFamily: 'OpenSans-Semibold'
     },
 
     ctaText: {
         color: colors.white,
         fontSize: 16,
-        fontWeight: '900',
         textAlign: 'center',
         position: 'absolute',
         top: '36%',

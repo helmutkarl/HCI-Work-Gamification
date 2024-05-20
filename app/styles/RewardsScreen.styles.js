@@ -26,7 +26,6 @@ export default StyleSheet.create({
         color: colors.titles,
         fontSize: 32,
         marginLeft: 8,
-        fontWeight: '900',
         fontFamily: 'Montserrat-Semibold'
     },
 
@@ -34,9 +33,9 @@ export default StyleSheet.create({
         color: colors.titles,
         fontSize: 16,
         marginLeft: 8,
-        fontWeight: '500',
         fontFamily: 'OpenSans-Light'
     },
+    
     contentContainer: {
         paddingBottom: 64,
     },

@@ -19,7 +19,6 @@ chartContainer: {
 chartNumber: {
     color: colors.titles,
     fontSize: 30,
-    fontWeight: '600',
     textAlign: 'center',
     position: 'absolute',
     alignSelf: 'center',
@@ -30,7 +29,6 @@ chartNumber: {
 chartText: {
     color: colors.titles,
     fontSize: 12,
-    fontWeight: '500',
     textAlign: 'center',
     position: 'absolute',
     top: '60%',

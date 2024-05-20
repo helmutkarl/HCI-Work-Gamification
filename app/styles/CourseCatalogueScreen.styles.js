@@ -17,13 +17,11 @@ export default StyleSheet.create({
     titleText: {
         color: colors.titles,
         fontSize: 32,
-        fontWeight: '900',
         fontFamily: 'Montserrat-Semibold'
     },
     subTitleText: {
         color: colors.titles,
         fontSize: 16,
-        fontWeight: '500',
         fontFamily: 'OpenSans-Light'
     },
     textInput: {

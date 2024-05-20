@@ -11,7 +11,6 @@ export default StyleSheet.create({
         alignItems: 'left',
         justifyContent: 'left',
         margin: 5,
-        //marginTop: 40,
     },
 
     tags: {
@@ -45,12 +44,12 @@ export default StyleSheet.create({
     tagsText: {
         color: colors.titles,
         fontSize: 14,
-        fontWeight: '700'
+        fontFamily: 'OpenSans-Semibold'
     },
 
     tagsTextSelected: {
         color: colors.white,
         fontSize: 14,
-        fontWeight: '700'
+        fontFamily: 'OpenSans-Bold'
     },
 });

@@ -22,13 +22,11 @@ export default StyleSheet.create({
     titleText: {
         color: colors.titles,
         fontSize: 32,
-        fontWeight: '900',
         fontFamily: 'Montserrat-Semibold'
     },
     subTitleText: {
         color: colors.titles,
         fontSize: 16,
-        fontWeight: '500',
         fontFamily: 'OpenSans-Light'
     },
     textInput: {
@@ -53,7 +51,6 @@ export default StyleSheet.create({
 
     ctaContainer: {
         marginTop: 25,
-        //backgroundColor: colors.primary,
         alignItems: 'center',
         position: 'relative',
     },
@@ -71,13 +68,11 @@ export default StyleSheet.create({
         color: colors.white,
         fontSize: 18,
         marginLeft: 8,
-        fontWeight: '500'
     },
 
     ctaText: {
         color: colors.white,
         fontSize: 16,
-        fontWeight: '900',
         textAlign: 'center',
         position: 'absolute',
         top: '36%',

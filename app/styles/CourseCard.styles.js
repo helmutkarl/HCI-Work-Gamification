@@ -18,14 +18,13 @@ export default StyleSheet.create({
         color: colors.secondary,
         fontSize: 14,
         marginLeft: 8,
-        fontWeight: '700',
         marginBottom: 13,
+        fontFamily: 'OpenSans-Semibold'
     },
     courseTitle: {
         color: colors.titles,
         fontSize: 16,
         marginLeft: 8,
-        fontWeight: '900',
         marginBottom: 5,
         marginTop: 13,
         fontFamily: 'Montserrat-Semibold'
@@ -34,17 +33,11 @@ export default StyleSheet.create({
         color: colors.titles,
         fontSize: 14,
         left: 8,
-        fontWeight: '500',
         fontFamily: 'OpenSans-Light'
     },
     image: {
         height: 100,
         width: 100
-    },
-    tagsText: {
-        color: colors.secondary,
-        fontSize: 16,
-        fontWeight: '900'
     },
 
     progressLineContainer: {
@@ -75,7 +68,7 @@ export default StyleSheet.create({
     },
     statusTags: {
         marginTop: 2,
-        marginLeft: 170,
+        marginLeft: 185,
         paddingHorizontal: 8,
         paddingVertical: 3,
         borderRadius: 15,
@@ -83,14 +76,13 @@ export default StyleSheet.create({
         shadowRadius: 12,
         overflow: "hidden",
         backgroundColor: '#EAF8BF',
-        //flexDirection: 'row',
         alignItems: 'right',
         justifyContent: "right",
         marginBottom: -10,
     },
     statusTagsText: {
         color: '#27476E',
-        fontSize: 12,
-        fontWeight: '500'
+        fontSize: 10,
+        fontFamily: 'OpenSans-Semibold'
     },
 });

@@ -12,8 +12,18 @@ import TypeFilters from '../components/TypeFilters.js';
 
 export default CourseCatalogueScreen = ({ navigation }) => {
     const [searchString, setSearchString] = useState('');
-
     const [filteredCourses, setFilteredCourses] = useState(coursesData);
+
+    useEffect(() => {
+        const filtered = coursesData.filter(course =>
+            course.title.toLowerCase().includes(searchString.toLowerCase())
+        );
+        setFilteredCourses(filtered);
+    }, [searchString]);
+
+    const handleSearch = (text) => {
+        setSearchString(text);
+    };
 
     const handleCoursesFilter = (filteredCourses) => {
         setFilteredCourses(filteredCourses);
@@ -29,7 +39,8 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                 <Text style={styles.subTitleText}>Explore all our trainings here!</Text>
             </View>
             <TextInput
-                onChangeText={text => setSearchString(text)}
+                onChangeText={handleSearch}
+                value={searchString}
                 style={styles.textInput}
                 placeholder="Search for...">
             </TextInput>

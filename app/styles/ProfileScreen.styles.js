@@ -63,21 +63,18 @@ export default StyleSheet.create({
         color: colors.titles,
         fontSize: 32,
         marginLeft: 8,
-        fontWeight: '900',
         fontFamily: 'Montserrat-Semibold'
     },
     subTitleText: {
         color: colors.titles,
         fontSize: 16,
         marginLeft: 8,
-        fontWeight: '500',
         alignSelf: 'center',
         fontFamily: 'OpenSans-Light'
     },
     tagsText: {
         color: colors.secondary,
         fontSize: 16,
-        fontWeight: '700',
         fontFamily: 'Montserrat-Semibold'
     },
 
@@ -85,7 +82,6 @@ export default StyleSheet.create({
         color: colors.titles,
         fontSize: 16,
         marginLeft: 8,
-        fontWeight: '500',
         marginVertical: 11,
         fontFamily: 'Montserrat-Regular'
     },
