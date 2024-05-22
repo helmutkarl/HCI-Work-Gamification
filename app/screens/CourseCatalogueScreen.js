@@ -52,7 +52,9 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                 <View>
                     <CategoryFilters onPress={handleCoursesFilter} courses={coursesData} />
                 </View>
-                {filteredCourses.map((course, index) => (
+                {filteredCourses
+                .filter(course => !course.status || course.status === 'Not Enrolled')
+                .map((course, index) => (
                     <CourseCard
                         key={index}
                         course={course}
@@ -64,7 +66,7 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                             category: course.category,
                             subtitle: course.subtitle,
                             description: course.description,
-                            status: 'Not Enrolled',
+                            status: course.status || 'Not Enrolled',
                         })}
                     />
                 ))}

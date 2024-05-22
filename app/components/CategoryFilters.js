@@ -8,7 +8,7 @@ export default CategoryFilters = ({ onPress, courses }) => {
     const [selectedTag, setSelectedTag] = useState("All");
     const [filteredCount, setFilteredCount] = useState(courses.length);
 
-    const tags = ["All", "IT", "Management", "Design", "Soft Skills", "Languages"];
+    const tags = ["All", "IT", "Management", "Design", "Soft Skills", "Languages", "Safety"];
 
     const handleTagPress = (tag) => {
         setSelectedTag(tag);

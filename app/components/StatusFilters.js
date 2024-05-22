@@ -12,7 +12,7 @@ export default StatusFilters = ({ users, userId, onPress, }) => {
 
 
 
-    const tags = ["All", "Registered", "In Progress", "Completed"];
+    const tags = ["All", "Enrolled", "In Progress", "Completed"];
     const handleTagPress = (tag) => {
         setSelectedTag(tag);
         const user = users.find(user => user.id === userId);
@@ -22,8 +22,8 @@ export default StatusFilters = ({ users, userId, onPress, }) => {
             case "All":
                 filteredCourses = user.courses;
                 break;
-            case "Registered":
-                filteredCourses = user.courses.filter(course => course.status === "Registered");
+            case "Enrolled":
+                filteredCourses = user.courses.filter(course => course.status === "Enrolled");
                 break;
             case "In Progress":
                 filteredCourses = user.courses.filter(course => course.status === "In Progress");

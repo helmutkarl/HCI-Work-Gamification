@@ -29,7 +29,7 @@ export default CourseDetailScreen = ({ route }) => {
             if (!courseExists) {
                 const updatedUser = {
                     ...user,
-                    courses: [...user.courses, { id, status: 'Registered' }]
+                    courses: [...user.courses, { id, status: 'Enrolled' }]
                 };
                 setUser(updatedUser);
                 try {

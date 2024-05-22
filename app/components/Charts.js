@@ -6,17 +6,17 @@ import styles from '../styles/Charts.styles';
 
 const Charts = ({ userProfile }) => {
 
-    const [registeredCount, setRegisteredCount] = useState(0);
+    const [enrolledCount, setEnrolledCount] = useState(0);
     const [inProgressCount, setInProgressCount] = useState(0);
     const [completedCount, setCompletedCount] = useState(0);
 
     useEffect(() => {
         if (userProfile) {
-            const registered = userProfile.courses.filter(course => course.status === 'Registered').length;
+            const enrolled = userProfile.courses.filter(course => course.status === 'Enrolled').length;
             const inProgress = userProfile.courses.filter(course => course.status === 'In Progress').length;
             const completed = userProfile.courses.filter(course => course.status === 'Completed').length;
 
-            setRegisteredCount(registered);
+            setEnrolledCount(enrolled);
             setInProgressCount(inProgress);
             setCompletedCount(completed);
         }
@@ -26,8 +26,8 @@ const Charts = ({ userProfile }) => {
         <View style={styles.chartContainerAll}>
             <View style={styles.chartContainer}>
                 <Image source={require('../assets/icons/chart_1.png')} style={{ width: 115, height: 115 }} />
-                <Text style={{ ...styles.chartNumber, left: '49%' }}>{registeredCount}</Text>
-                <Text style={styles.chartText}>Registered</Text>
+                <Text style={{ ...styles.chartNumber, left: '49%' }}>{enrolledCount}</Text>
+                <Text style={styles.chartText}>Enrolled</Text>
             </View>
             <View style={styles.chartContainer}>
                 <Image source={require('../assets/icons/chart_2.png')} style={{ width: 115, height: 115 }} />
