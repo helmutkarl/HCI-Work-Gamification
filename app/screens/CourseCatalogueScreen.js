@@ -1,5 +1,5 @@
-import { View, ScrollView, TouchableOpacity, Text, ImageBackground, TextInput, Image } from 'react-native';
-import { React, useState, useEffect } from "react";
+import { View, ScrollView, Text, ImageBackground, TextInput } from 'react-native';
+import { React, useState, useEffect } from 'react';
 
 
 import CourseCard from '../components/CourseCard';
@@ -29,27 +29,25 @@ export default CourseCatalogueScreen = ({ navigation }) => {
         setFilteredCourses(filteredCourses);
     };
 
-
     return (
         <ImageBackground source={background} style={styles.backgroundContainer}>
-           
             <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false}>
-            <View style={styles.titleContainer}>
-                <Text style={styles.titleText}>Course Catalogue</Text>
-                <Text style={styles.subTitleText}>Explore all our trainings here!</Text>
-            </View>
-            <TextInput
-                onChangeText={handleSearch}
-                value={searchString}
-                style={styles.textInput}
-                placeholder="Search for...">
-            </TextInput>
-            <View>
-                <TypeFilters onPress={handleCoursesFilter} courses={coursesData}/>
-            </View>
-            <View>
-                <CategoryFilters onPress={handleCoursesFilter} courses={coursesData}/>
-            </View>
+                <View style={styles.titleContainer}>
+                    <Text style={styles.titleText}>Course Catalogue</Text>
+                    <Text style={styles.subTitleText}>Explore all our trainings here!</Text>
+                </View>
+                <TextInput
+                    onChangeText={handleSearch}
+                    value={searchString}
+                    style={styles.textInput}
+                    placeholder="Search for...">
+                </TextInput>
+                <View>
+                    <TypeFilters onPress={handleCoursesFilter} courses={coursesData} />
+                </View>
+                <View>
+                    <CategoryFilters onPress={handleCoursesFilter} courses={coursesData} />
+                </View>
                 {filteredCourses.map((course, index) => (
                     <CourseCard
                         key={index}
@@ -63,7 +61,7 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                             description: course.description,
                         }}
                         onPress={() => navigation.navigate('CourseDetailScreen', {
-                            image : course.image,                             
+                            image: course.image,
                             title: course.title,
                             type: course.type,
                             category: course.category,

@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, FlatList, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
+
 import rewardsData from '../data/rewards.json';
 import background from '../assets/images/background.png';
 import styles from '../styles/RewardsScreen.styles';

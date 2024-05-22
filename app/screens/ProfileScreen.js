@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ScrollView, ImageBackground, Image, View, Text } from 'react-native';
+import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
+
 import background from '../assets/images/background.png';
 import styles from '../styles/ProfileScreen.styles.js';
 import global from '../styles/global.styles.js';
@@ -9,7 +11,6 @@ import CourseCard from '../components/CourseCard';
 import ProfileStats from '../components/ProfileStats';
 import StatusFilters from '../components/StatusFilters';
 import Charts from '../components/Charts';
-import { Menu, MenuOptions, MenuOption, MenuTrigger } from 'react-native-popup-menu';
 
 export default ProfileScreen = ({ navigation }) => {
     const { user, logout } = useAuth();
