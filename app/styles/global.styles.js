@@ -1,8 +1,7 @@
-import { StyleSheet } from 'react-native';
-import colors from '../config/colors';
+import { StyleSheet, Platform } from 'react-native';
 
 export default commonStyles = StyleSheet.create({
     scrollView: {
-        paddingBottom: 64
+        paddingBottom: Platform.OS === 'ios' ? 72 : 64
     }
 });

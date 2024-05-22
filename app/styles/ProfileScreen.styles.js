@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import colors from '../config/colors';
+import { Platform } from 'react-native';
 
 export default StyleSheet.create({
     backgroundContainer: {
@@ -15,13 +16,14 @@ export default StyleSheet.create({
     },
 
     settingsContainer: {
-        marginTop: 50,
-        right: 30,
+        marginTop: 48,
+        right: 32,
         alignItems: 'right',
         selfAlign: 'right',
         position: 'absolute',
+        zIndex: Platform.OS === 'ios' ? 1 : 0
     },
-    
+
     tagContainer: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -42,7 +44,7 @@ export default StyleSheet.create({
     },
     titleContainer: {
         paddingHorizontal: 10,
-        paddingVertical: 20,
+        paddingVertical: 10,
         flexDirection: 'column',
         alignItems: 'center',
     },

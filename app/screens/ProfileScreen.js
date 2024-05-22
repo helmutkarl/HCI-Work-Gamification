@@ -34,19 +34,19 @@ export default ProfileScreen = ({ navigation }) => {
 
     if (!user) {
         return (
-            <View style={styles.loadingContainer}>
+            <View>
                 <Text>Loading...</Text>
             </View>
         );
     }
 
     return (
-
         <ImageBackground source={background} style={styles.backgroundContainer}>
             <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false} stickyHeaderIndices={[5]}>
                 <Menu onSelect={selectOptionType} style={styles.settingsContainer}>
                     <MenuTrigger>
                         <Image source={require('../assets/icons/settings.png')} style={{ width: 30, height: 30 }} />
+
                     </MenuTrigger>
                     <MenuOptions customStyles={{ optionText: styles.settingsText }}>
                         <View style={styles.settingsContainer} />
@@ -71,7 +71,7 @@ export default ProfileScreen = ({ navigation }) => {
                     <Text style={styles.subTitleText}>{user.role}</Text>
                 </View>
                 <Charts userProfile={user} />
-                <View style={{ paddingTop: 35 }}>
+                <View style={{ paddingTop: 32 }}>
                     <StatusFilters users={[user]} userId={user.id} onPress={handleCoursesFilter} />
                 </View>
                 {filteredCourses.map((courseProfile, index) => {
@@ -106,5 +106,3 @@ export default ProfileScreen = ({ navigation }) => {
         </ImageBackground>
     );
 };
-
-

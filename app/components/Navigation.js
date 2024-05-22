@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Image, TouchableOpacity } from 'react-native';
+import { Image, TouchableOpacity, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -15,6 +15,7 @@ import LoginScreen from '../screens/LoginScreen.js';
 import IntroScreen from '../screens/IntroScreen.js';
 import RewardDetailScreen from '../screens/RewardDetailScreen.js';
 import { useAuth } from './AuthContext';
+import styles from '../styles/Navigation.styles.js';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -31,42 +32,42 @@ function MainNavigator() {
                 borderTopLeftRadius: 12,
                 borderTopRightRadius: 12,
                 position: 'absolute',
-                height: 64,
+                height: Platform.OS === 'ios' ? 72 : 64,
                 elevation: 0,
             }
         }}>
             <Tab.Screen name="Courses" component={CourseStackNavigator} options={{
-                tabBarIcon: ({ focused, size }) => (
+                tabBarIcon: ({ focused }) => (
                     <Image
                         source={focused ? require('../assets/icons/menu_rocket_full.png') : require('../assets/icons/menu_rocket_empty.png')}
-                        style={{ width: 32, height: 32 }}
+                        style={styles.iconStyle}
                     />
                 ),
                 headerShown: false,
             }} />
             <Tab.Screen name="Leaderboard" component={LeaderboardScreen} options={{
-                tabBarIcon: ({ focused, size }) => (
+                tabBarIcon: ({ focused }) => (
                     <Image
                         source={focused ? require('../assets/icons/menu_trophy_full.png') : require('../assets/icons/menu_trophy_empty.png')}
-                        style={{ width: 32, height: 32 }}
+                        style={styles.iconStyle}
                     />
                 ),
                 headerShown: false,
             }} />
             <Tab.Screen name="Rewards" component={RewardStackNavigator} options={{
-                tabBarIcon: ({ focused, size }) => (
+                tabBarIcon: ({ focused }) => (
                     <Image
                         source={focused ? require('../assets/icons/menu_shield_full.png') : require('../assets/icons/menu_shield_empty.png')}
-                        style={{ width: 32, height: 32 }}
+                        style={styles.iconStyle}
                     />
                 ),
                 headerShown: false,
             }} />
             <Tab.Screen name="Profile" component={CourseStackNavigator2} options={{
-                tabBarIcon: ({ focused, size }) => (
+                tabBarIcon: ({ focused }) => (
                     <Image
                         source={focused ? require('../assets/icons/menu_user_full.png') : require('../assets/icons/menu_user_empty.png')}
-                        style={{ width: 32, height: 32 }}
+                        style={styles.iconStyle}
                     />
                 ),
                 headerShown: false,
@@ -124,7 +125,7 @@ function CourseStackNavigator() {
             <CourseStack.Screen name="CourseCatalogueScreen" component={CourseCatalogueScreen} options={{ headerShown: false }} />
             <CourseStack.Screen
                 name="CourseDetailScreen"
-                component={CourseDetailScreen} // Ensure this is defined or imported if you use it
+                component={CourseDetailScreen}
                 options={({ navigation }) => ({
                     headerBackTitleVisible: false,
                     headerTransparent: true,
@@ -171,8 +172,6 @@ function RewardStackNavigator() {
         </RewardStack.Navigator>
     );
 }
-
-
 
 const CustomBackButton = ({ onPress }) => {
     return (
