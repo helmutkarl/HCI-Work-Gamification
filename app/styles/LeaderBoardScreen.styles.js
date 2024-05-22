@@ -30,7 +30,7 @@ export default StyleSheet.create({
     },
 
     leadersContainer: {
-        marginTop: 30,
+        marginTop: 37,
         margin: 18,
         backgroundColor: '#f8fce7',
         flexDirection: 'row',

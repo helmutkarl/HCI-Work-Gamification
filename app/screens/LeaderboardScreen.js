@@ -23,7 +23,7 @@ export default LeaderboardScreen = () => {
                         style={[styles.image, { marginRight: 4 }]}
                         resizeMode="contain" />
                     <View>
-                        <Text style={styles.xps}>1130 XP</Text>
+                        <Text style={styles.xps}>1640 XP</Text>
                         <Text style={styles.name}>Petra Kabelbinder</Text>
                         <Text style={styles.position}>Operations Manager</Text>
                     </View>
@@ -35,7 +35,7 @@ export default LeaderboardScreen = () => {
                         style={[styles.image, { marginRight: 4 }]}
                         resizeMode="contain" />
                     <View>
-                        <Text style={styles.xps}>1640 XP</Text>
+                        <Text style={styles.xps}>1130 XP</Text>
                         <Text style={styles.name}>Anna-Louisa Winkler</Text>
                         <Text style={styles.position}>Financial Analyst</Text>
                     </View>
