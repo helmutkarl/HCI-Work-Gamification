@@ -15,7 +15,7 @@
         "category": "IT",
         "title": "Excel",
         "subtitle": "Available Now | 4 h | 200 XP",
-        "description": "Description"
+        "description": "This course is designed for individuals who are new to Microsoft Excel and want to build a strong foundation in spreadsheet basics. Participants will learn how to navigate the Excel interface, create and format spreadsheets, enter data, and perform basic calculations.By the end of the course, participants will have the skills and confidence to create and manage basic spreadsheets effectively using Excel."
     },
     {
         "id": 3,
@@ -24,35 +24,37 @@
         "category": "IT",
         "title": "Excel Advanced",
         "su,btitle": "Available Now | 5 h | 250 XP",
-        "description": "Description"
+        "description": "This course is designed for individuals who have a solid understanding of Microsoft Excel and want to enhance their skills to an advanced level. Participants will explore advanced features and functionalities of Excel to streamline data analysis, reporting, and decision-making processes.  By the end of the course, participants will be proficient in leveraging Excel's advanced capabilities to analyze complex data sets, automate tasks, and generate insightful reports for informed decision-making."
     },
     {
         "id": 4,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1101px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Defense_In_Depth_-_Onion_Model.svg/220px-Defense_In_Depth_-_Onion_Model.svg.png",
         "type": "e-Learning",
         "category": "IT",
-        "title": "Excel Advanced",
-        "subtitle": "Available Now | 5 h | 250 XP",
-        "description": "Description"
+        "title": "Security Basics",
+        "subtitle": "Available Now | Mandatory |  4 h | 150 XP",
+        "description": "This course provides an in-depth exploration of information technology (IT) security principles, practices, and methodologies. Participants will gain a comprehensive understanding of the latest threats, vulnerabilities, and attack vectors facing modern digital systems and networks.By the end of the course, participants will be equipped with the knowledge and skills to effectively protect organizations from cyber threats and mitigate security risks."
 
     },
     {
         "id": 5,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1101px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png",
+        "image": "",
         "type": "In person",
         "category": "IT",
-        "title": "Excel Advanced",
-        "subtitle": "Available Now | 5 h | 250 XP",
-        "description": "Description"
+        "title": "Data Security",
+        "subtitle": "Available Now | Mandatory | 3 h | 150 XP",
+        "description": "This course offers a comprehensive exploration of data security principles, strategies, and best practices. Participants will delve into the critical components of data protection, including confidentiality, integrity, and availability. By the end of the course, participants will be equipped with the knowledge and skills to design and implement robust data security measures to protect sensitive information and maintain regulatory compliance in today's digital landscape."
     },
     {
         "id": 6,
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1101px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png",
-        "type": "e-Learning",
+        "type": "Online Classroom",
         "category": "Management",
-        "title": "Project Management",
-        "subtitle": "Available Now | 5 h | 250 XP",
-        "description": "Description"
+        "title": "Leadership Management",
+        "subtitle": "Available Now | Mandatory for Leadership | 2.5 h | 150 XP",
+        "description": "This course is designed to develop effective leadership skills and enhance participants' ability to lead teams and organizations. It covers essential leadership principles, including different leadership styles and techniques, team development, and conflict management.By the end of the course, participants will be equipped with the tools and knowledge to lead with confidence and foster a positive, productive work environment."
+
+
     },
     {
         "id": 7,
@@ -61,6 +63,77 @@
         "category": "Management",
         "title": "Project Management",
         "subtitle": "Available Now | 5 h | 250 XP",
-        "description": "Description"
-    }
+        "description": "This course provides the fundamental skills and knowledge needed to successfully manage projects from inception to completion. It covers key project management principles, including project planning, scheduling, budgeting, risk management, and quality control.By the end of the course, participants will be equipped to deliver projects on time, within scope, and on budget."
+    },
+    {
+        "id":8
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/02/Management_System_3.1.png",
+        "type": "In person"
+        "category": "Management"
+        "title": "Team Management"
+        "subtitle": "Avaible 20.06.2024 | 3 h | 200 XP",
+        "description": "Learn the essential skills and knowledge to effectively manage and lead teams. Through interactive sessions, participants will learn about team dynamics, communication strategies, conflict resolution, and motivational techniques.By the end of the course, participants will be able to build cohesive teams, foster collaboration, and enhance overall team productivity."
+    },
+    {
+        "id":9
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/ISO_7010_E003_-_First_aid_sign.svg/1024px-ISO_7010_E003_-_First_aid_sign.svg.png",
+        "type": "In person"
+        "category": "Safety and Emergency"
+        "title": "First Aid"
+        "subtitle": "Avaible every month| Mandatory | 4h | 200 XP",
+        "describtion": "This course provides essential training in first aid techniques and emergency response. Participants will learn how to assess and manage a variety of medical emergencies, including cuts, burns, fractures, and cardiac arrest.By the end of the course, attendees will be certified in basic first aid and prepared to act swiftly and effectively in critical moments."
+     },    
+     {
+         "id": 10
+         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/ISO_7010_W073.svg/1024px-ISO_7010_W073.svg.png",
+         "type": "In person"
+         "category": "Safety and Emergency"
+         "title":    "Fire Safety"
+         "subtitle":  "Avaible now| Mandatory | 2h | 150 XP",
+         "describtion": "This course provides comprehensive training in fire safety and prevention measures. Participants will learn how to identify fire hazards, use fire extinguishers effectively, and evacuate safely in the event of a fire. By the end of the course, attendees will be equipped with the knowledge and tools to enhance fire safety in their workplace or community."
+     },    
+     {
+         "id": 11
+         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Flag_map_of_Spain.svg/730px-Flag_map_of_Spain.svg.png",
+         "type": "e-Learning"
+         "category": "Language"
+         "title": "Spanish Beginners"
+         "subtitle": "Avaible always | 50h| 300 XP",
+         "describtion": "This course is designed for those who wish to start learning Spanish from scratch. Participants will learn the fundamentals of the Spanish language, including basic vocabulary, elementary grammar, and simple conversation skills. By the end of the course, participants will be able to engage in basic conversations in Spanish and comprehend simple texts."
+     },    
+     {
+         "id": 12
+         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Flag_map_of_Spain.svg/730px-Flag_map_of_Spain.svg.png",
+         "type": "e-Learning"
+         "category": "Language"
+         "title": "Spanish Advanced"    
+         "subtitle": "Avaible always | 50h| 200 XP",
+         "describtion": "This course is designed for individuals who have a solid foundation in Spanish and want to take their language skills to the next level. Participants will build upon their existing knowledge of vocabulary, grammar, and conversational skills to achieve greater fluency and proficiency in Spanish. By the end of the course, students will be able to express themselves more confidently in Spanish and engage in discussions on a wide range of topics."
+     },    
+     {
+         "id": 13
+         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png",
+         "type": "e-Learning"
+         "category": "Language"
+         "title": "Chinese Beginners"
+         "subtitle": "Avaible always | 50h| 400 XP",
+         "describtion": "This course is tailored for individuals with little to no prior knowledge of the Chinese language. Participants will embark on an exciting journey to learn Mandarin Chinese, focusing on essential vocabulary, basic grammar, and fundamental language skills. By the end of the course, participants will be equipped with the foundation to communicate effectively in basic Chinese and navigate common scenarios in a Mandarin-speaking environment."
+     },    
+     {
+         "id": 14
+         "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Canva_logo..png",
+         "type": "Online Classroom"
+         "category": "Design"
+         "title": "Canvas Basics"
+         "subtitle": "17.06.24 | 2h | 50n XP", 
+         "describtion": "This course is designed to introduce participants to Canva, a user-friendly graphic design platform. Participants will learn how to navigate the Canva interface, create stunning visual content, and design professional-looking graphics for various purposes. By the end of the course, participants will be proficient in using Canva to elevate their design projects to the next level."
+     },    
+     {
+         "id": 15
+         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/National_Park_Service_sample_pictographs.svg/220px-National_Park_Service_sample_pictographs.svg.png",
+         "type": "In person"
+         "category": "Design"
+         "title": "Power of Design"
+         "subtitle": "Avaible 22.06.-24.06.24 | 2x 3h | 150 XP",
+         "describtion": "This course explores the transformative impact of design across various disciplines. Participants will delve into the principles of design, examining its influence on communication, problem-solving, and innovation. By the end of the course, participants will gain a deeper appreciation for the role of design in shaping our world and develop practical skills to apply design principles in their personal and professional endeavors."
 ]
