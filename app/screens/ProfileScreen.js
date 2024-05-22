@@ -47,7 +47,6 @@ export default ProfileScreen = ({ navigation }) => {
                 <Menu onSelect={selectOptionType} style={styles.settingsContainer}>
                     <MenuTrigger>
                         <Image source={require('../assets/icons/settings.png')} style={{ width: 30, height: 30 }} />
-
                     </MenuTrigger>
                     <MenuOptions customStyles={{ optionText: styles.settingsText }}>
                         <View style={styles.settingsContainer} />
@@ -82,7 +81,7 @@ export default ProfileScreen = ({ navigation }) => {
                             key={index}
                             course={{
                                 ...course,
-                                image: { uri: course.image },
+                                image: course.image,
                                 status: courseProfile.status,
                                 title: course.title,
                                 type: course.type,
@@ -98,6 +97,7 @@ export default ProfileScreen = ({ navigation }) => {
                                 category: course.category,
                                 subtitle: course.subtitle,
                                 description: course.description,
+                                id: course.id,
                             })}
                         />
                     );

@@ -9,13 +9,11 @@ export default StyleSheet.create({
         justifyContent: "center",
         marginBottom: -18,
     },
-
     chartContainer: {
         alignItems: 'center',
         justifyContent: "center",
         paddingHorizontal: 6,
     },
-
     chartNumber: {
         color: colors.titles,
         fontSize: 30,
@@ -25,7 +23,6 @@ export default StyleSheet.create({
         top: '25%',
         fontFamily: 'Montserrat-Semibold'
     },
-
     chartText: {
         color: colors.titles,
         fontSize: 12,

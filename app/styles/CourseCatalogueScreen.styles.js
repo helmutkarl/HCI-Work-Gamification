@@ -25,14 +25,23 @@ export default StyleSheet.create({
         fontFamily: 'OpenSans-Light'
     },
     textInput: {
+        flex: 1,
+        height: 32,
+        fontSize: 16,
+        fontFamily: 'OpenSans-Regular',
+        paddingLeft: 4
+    },
+    searchContainer: {
         marginTop: 10,
         paddingHorizontal: 10,
-        paddingVertical: 20,
+        paddingVertical: 10,
         margin: 18,
         backgroundColor: colors.white,
         borderRadius: 12,
         elevation: 5,
         shadowRadius: 12,
-        fontFamily: 'OpenSans-Regular'
-    },
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#fff'
+    }
 });

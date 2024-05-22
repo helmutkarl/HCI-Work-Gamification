@@ -12,7 +12,7 @@
         "courses": [
             {
                 "id": 1,
-                "status": "Registered"
+                "status": "Enrolled"
             },
             {
                 "id": 2,
@@ -28,11 +28,11 @@
             },
             {
                 "id": 5,
-                "status": "Registered"
+                "status": "Enrolled"
             },
             {
                 "id": 6,
-                "status": "Registered"
+                "status": "Enrolled"
             }
         ]
     },
@@ -65,7 +65,7 @@
             },
             {
                 "id": 5,
-                "status": "Registered"
+                "status": "Enrolled"
             }
         ]
     },
@@ -98,7 +98,7 @@
             },
             {
                 "id": 5,
-                "status": "Registered"
+                "status": "Enrolled"
             }
         ]
     },
@@ -131,7 +131,7 @@
             },
             {
                 "id": 5,
-                "status": "Registered"
+                "status": "Enrolled"
             }
         ]
     },
@@ -164,7 +164,7 @@
             },
             {
                 "id": 5,
-                "status": "Registered"
+                "status": "Enrolled"
             }
         ]
     }

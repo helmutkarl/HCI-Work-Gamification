@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, ScrollView, TouchableOpacity, Text, ImageBackground, Image, Alert } from 'react-native';
 
 import background from '../assets/images/background.png';
@@ -9,8 +9,19 @@ import { useAuth } from '../components/AuthContext.js';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default CourseDetailScreen = ({ route }) => {
-    const { image, title, type, category, subtitle, description, status, id } = route.params;
+    const { image, title, type, category, subtitle, description, status: initialStatus, id } = route.params || {};
     const { user, setUser } = useAuth();
+    const [status, setStatus] = useState(initialStatus);
+
+    // Checking if the user is enrolled in the course
+    useEffect(() => {
+        if (user) {
+            const course = user.courses.find(course => course.id === id);
+            if (course) {
+                setStatus(course.status);
+            }
+        }
+    }, [user, id]);
 
     const enrollCourse = async () => {
         if (user) {
@@ -27,8 +38,6 @@ export default CourseDetailScreen = ({ route }) => {
                 } catch (error) {
                     console.log(error);
                 }
-            } else {
-                Alert.alert("Info", "You are already enrolled in this course.");
             }
         } else {
             Alert.alert("Error", "Could not enroll in this course.");
@@ -71,6 +80,8 @@ export default CourseDetailScreen = ({ route }) => {
                 </View>
                 <CtaButton
                     status={status}
+                    user={user}
+                    courseId={id}
                     onPress={() => enrollCourse()} />
                 <View style={{ height: 64 }}></View>
             </ScrollView>
@@ -78,18 +89,17 @@ export default CourseDetailScreen = ({ route }) => {
     );
 }
 
-const CtaButton = ({ status, onPress }) => {
+const CtaButton = ({ status, user, courseId, onPress }) => {
     let buttonText;
     let textColor;
+
+    const courseExists = user && user.courses.some(course => course.id === courseId);
 
     // Determining button text and text color based on status
     if (status === 'Completed') {
         buttonText = 'Completed';
         textColor = colors.titles;
-    } else if (status === 'Enrolled') {
-        buttonText = 'Access Training';
-        textColor = colors.white;
-    } else if (status) {
+    } else if (courseExists) {
         buttonText = 'Continue training';
         textColor = colors.white;
     } else {

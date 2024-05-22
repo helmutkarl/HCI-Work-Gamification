@@ -6,15 +6,15 @@ export default CourseCard = ({ course, onPress }) => {
     return (
         <TouchableOpacity style={styles.courseContainer} onPress={onPress}>
             <Image
-                source={course.image}
+                source={{ uri: course.image }}
                 style={styles.image}
                 resizeMode="contain" />
             <View>
                 <Text style={styles.courseType}>{course.type}</Text>
                 {course.status === "In Progress" &&
                     <View>
-                        <View style={styles.progressLine}/>
-                        <View style={styles.progressLineFull}/>
+                        <View style={styles.progressLine} />
+                        <View style={styles.progressLineFull} />
                     </View>
                 }
                 <Text style={styles.courseTitle}>{course.title}</Text>

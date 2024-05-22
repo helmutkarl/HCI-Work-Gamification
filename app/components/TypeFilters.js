@@ -1,32 +1,34 @@
 import { React, useState } from 'react';
-import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
+
+
 import styles from '../styles/Filters.styles';
 
-export default TypeFilters = ({onPress, courses}) => {
+export default TypeFilters = ({ onPress, courses }) => {
 
-        const [selectedTag, setSelectedTag] = useState("All");
-        const [filteredCount, setFilteredCount] = useState(courses.length);
-    
-        const tags = ["All", "Online Classroom", "e-Learning", "In person"];
-    
-        const handleTagPress = (tag) => {
-            setSelectedTag(tag);
-            let filteredCourses;
-            switch (tag) {
-                case "All":
-                    filteredCourses = courses;
-                    break;
-                default:
-                    filteredCourses = courses.filter(course => course.type === tag);
-            }
-            setFilteredCount(filteredCourses.length);
-            onPress(filteredCourses);
-        };
+    const [selectedTag, setSelectedTag] = useState("All");
+    const [filteredCount, setFilteredCount] = useState(courses.length);
+
+    const tags = ["All", "Online Classroom", "e-Learning", "In person"];
+
+    const handleTagPress = (tag) => {
+        setSelectedTag(tag);
+        let filteredCourses;
+        switch (tag) {
+            case "All":
+                filteredCourses = courses;
+                break;
+            default:
+                filteredCourses = courses.filter(course => course.type === tag);
+        }
+        setFilteredCount(filteredCourses.length);
+        onPress(filteredCourses);
+    };
 
     return (
         <ScrollView
             horizontal={true}
-            showsHorizontalScrollIndicator={false}            
+            showsHorizontalScrollIndicator={false}
             scrollEnabled={true}>
             <View style={styles.tagContainer}>
                 {tags.map((tag, index) => (
@@ -38,7 +40,7 @@ export default TypeFilters = ({onPress, courses}) => {
                             selectedTag === tag && styles.tagsSelected
                         ]}>
                         <Text style={[styles.tagsText, selectedTag === tag && styles.tagsTextSelected]}>{tag} {selectedTag === tag && `(${filteredCount})`}</Text>
-                        </TouchableOpacity>
+                    </TouchableOpacity>
                 ))}
             </View>
         </ScrollView>

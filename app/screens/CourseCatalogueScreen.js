@@ -1,5 +1,6 @@
 import { View, ScrollView, Text, ImageBackground, TextInput } from 'react-native';
 import { React, useState, useEffect } from 'react';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 
 import CourseCard from '../components/CourseCard';
@@ -36,12 +37,15 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                     <Text style={styles.titleText}>Course Catalogue</Text>
                     <Text style={styles.subTitleText}>Explore all our trainings here!</Text>
                 </View>
-                <TextInput
-                    onChangeText={handleSearch}
-                    value={searchString}
-                    style={styles.textInput}
-                    placeholder="Search for...">
-                </TextInput>
+                <View style={styles.searchContainer}>
+                    <Icon name="search" size={20} color="#aaa" />
+                    <TextInput
+                        onChangeText={handleSearch}
+                        value={searchString}
+                        style={styles.textInput}
+                        placeholder="Search for...">
+                    </TextInput>
+                </View>
                 <View>
                     <TypeFilters onPress={handleCoursesFilter} courses={coursesData} />
                 </View>
@@ -51,22 +55,16 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                 {filteredCourses.map((course, index) => (
                     <CourseCard
                         key={index}
-                        course={{
-                            ...course,
-                            image: { uri: course.image },
-                            title: course.title,
-                            type: course.type,
-                            category: course.category,
-                            subtitle: course.subtitle,
-                            description: course.description,
-                        }}
+                        course={course}
                         onPress={() => navigation.navigate('CourseDetailScreen', {
+                            id: course.id,
                             image: course.image,
                             title: course.title,
                             type: course.type,
                             category: course.category,
                             subtitle: course.subtitle,
                             description: course.description,
+                            status: 'Not Enrolled',
                         })}
                     />
                 ))}

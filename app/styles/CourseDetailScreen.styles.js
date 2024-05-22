@@ -8,28 +8,23 @@ export default StyleSheet.create({
         flex: 1,
         resizeMode: 'cover',
     },
-
     imageContainer: {
         marginTop: 60,
         paddingHorizontal: 10,
         flexDirection: 'column',
         alignItems: 'center',
     },
-
     ctaContainer: {
         marginTop: 25,
         alignItems: 'center',
         position: 'relative',
     },
-
-
     titleContainer: {
         paddingHorizontal: 10,
         flexDirection: 'column',
         alignItems: 'left',
         paddingRight: 20,
     },
-
     tagContainer: {
         marginLeft: 13,
         flexDirection: 'row',
@@ -37,7 +32,6 @@ export default StyleSheet.create({
         justifyContent: 'left',
         paddingVertical: 10,
     },
-
     tags: {
         margin: 5,
         paddingHorizontal: 18,
@@ -51,13 +45,11 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: "center",
     },
-
     tagsText: {
         color: colors.secondary,
         fontSize: 14,
         fontFamily: 'OpenSans-Semibold'
     },
-
     tags2: {
         margin: 5,
         paddingHorizontal: 18,
@@ -71,21 +63,17 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: "center",
     },
-
     tagsText2: {
         color: colors.titles,
         fontSize: 14,
         fontFamily: 'OpenSans-Semibold'
     },
-
-
     titleText: {
         color: colors.titles,
         fontSize: 32,
         marginLeft: 8,
         fontFamily: 'Montserrat-Semibold'
     },
-
     subTitleText: {
         color: colors.text,
         fontSize: 18,
@@ -94,7 +82,6 @@ export default StyleSheet.create({
         marginBottom: 20,
         fontFamily: 'OpenSans-Light'
     },
-
     descriptionText: {
         color: colors.text,
         fontSize: 16,
@@ -102,7 +89,6 @@ export default StyleSheet.create({
         marginTop: 25,
         fontFamily: 'OpenSans-Regular'
     },
-
     descriptionTitle: {
         color: colors.text,
         fontSize: 18,
@@ -110,7 +96,6 @@ export default StyleSheet.create({
         marginTop: 20,
         fontFamily: 'OpenSans-Semibold'
     },
-
     ctaText: {
         color: colors.white,
         fontSize: 16,
@@ -119,7 +104,6 @@ export default StyleSheet.create({
         top: '36%',
         fontFamily: 'Montserrat-Semibold'
     },
-        
     progressLine: {
         opacity: 0.3,
         height: 3,
@@ -129,7 +113,6 @@ export default StyleSheet.create({
         width: 372,
         marginLeft: 8,
     },
-    
     progressLineFull: {
         height: 3,
         borderTopWidth: 3,
@@ -138,5 +121,5 @@ export default StyleSheet.create({
         width: 250,
         marginLeft: 8,
         position: "absolute",
-    },
+    }
 });
