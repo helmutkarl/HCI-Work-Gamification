@@ -11,11 +11,11 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "plugins":[
+    "plugins": [
       [
         "expo-font",
         {
-          "fonts":[
+          "fonts": [
             "./app/assets/fonts/Open_Sans/OpenSans-SemiBold.ttf",
             "./app/assets/fonts/Open_Sans/OpenSans-Regular.ttf",
             "./app/assets/fonts/Open_Sans/OpenSans-Light.ttf",
@@ -39,6 +39,17 @@
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "57e7d2ef-0963-4f05-8698-ceb1dc692635"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/57e7d2ef-0963-4f05-8698-ceb1dc692635"
     }
   }
 }
