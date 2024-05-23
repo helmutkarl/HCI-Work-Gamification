@@ -9,7 +9,7 @@ export default CourseCard = ({ course, onPress }) => {
                 source={{ uri: course.image }}
                 style={styles.image}
                 resizeMode="contain" />
-            <View>
+            <View style={styles.textContainer}>
                 <Text style={styles.courseType}>{course.type}</Text>
                 {course.status === "In Progress" &&
                     <View>
@@ -20,8 +20,10 @@ export default CourseCard = ({ course, onPress }) => {
                 <Text style={styles.courseTitle}>{course.title}</Text>
                 <Text style={styles.courseSubTitle}>{course.subtitle}</Text>
                 {course.status &&
-                    <View style={styles.statusTags}>
-                        <Text style={styles.statusTagsText}>{course.status}</Text>
+                    <View style={styles.statusTagsContainer}>
+                        <View style={styles.statusTags}>
+                            <Text style={styles.statusTagsText}>{course.status}</Text>
+                        </View>
                     </View>
                 }
             </View>
