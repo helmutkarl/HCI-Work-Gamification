@@ -9,7 +9,7 @@ export default StyleSheet.create({
         margin: 18,
         backgroundColor: '#f8fce7',
         flexDirection: 'row',
-        alignItems: 'left',
+        alignItems: 'center',
         borderRadius: 12,
         elevation: 5, //for Android
         shadowColor: colors.primary,
@@ -42,21 +42,19 @@ export default StyleSheet.create({
         height: 100,
         width: 100
     },
-
     progressLineContainer: {
         borderTopWidth: 3,
         marginTop: 28,
         width: 230,
         marginLeft: 8,
     },
-
     progressLine: {
         opacity: 0.3,
         height: 3,
         borderTopWidth: 3,
         borderColor: '#27476E',
         borderStyle: "solid",
-        width: 230,
+        width: 220,
         marginLeft: 8,
         position: "absolute",
     },
@@ -69,16 +67,20 @@ export default StyleSheet.create({
         marginLeft: 8,
         position: "absolute",
     },
+    statusTagsContainer: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        flex: 1
+    },
     statusTags: {
         marginTop: 2,
-        marginLeft: 190,
         paddingHorizontal: 8,
         paddingVertical: 3,
         borderRadius: 15,
         backgroundColor: '#EAF8BF',
-        alignItems: 'right',
-        justifyContent: "right",
         marginBottom: -10,
+        flexDirection: 'row',
         shadowColor: colors.primary,
         shadowOffset: { width: 1, height: 3 },
         shadowOpacity: 0.25,
@@ -90,4 +92,8 @@ export default StyleSheet.create({
         fontSize: 10,
         fontFamily: 'OpenSans-Semibold'
     },
+    textContainer: {
+        width: '72%',
+        flexDirection: 'column'
+    }
 });

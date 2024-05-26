@@ -24,5 +24,7 @@ react-native-vector-icons/MaterialIcons
 Dauer der Entwicklung:
 siehe GitHub; geschätzte 80h - 120h
 
+Link zur Expo App: https://expo.dev/accounts/hkrl/projects/HCI-Work-Gamification
+
 Weitere Anmerkungen:
 - Die Intro Slides werden nur beim ersten Start angezeigt. Um sie erneut anzuzeigen, den Storage von Expo leeren.
