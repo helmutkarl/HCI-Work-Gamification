@@ -29,7 +29,7 @@ export default StyleSheet.create({
         height: 32,
         fontSize: 16,
         fontFamily: 'OpenSans-Regular',
-        paddingLeft: 4
+        paddingLeft: 4,
     },
     searchContainer: {
         marginTop: 10,
@@ -38,10 +38,13 @@ export default StyleSheet.create({
         margin: 18,
         backgroundColor: colors.white,
         borderRadius: 12,
-        elevation: 5,
-        shadowRadius: 12,
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        elevation: 5, //for Android
+        shadowColor: colors.primary,
+        shadowOffset: { width: 1, height: 3 },
+        shadowOpacity: 0.25,
+        shadowRadius: 4, //for iOS
     }
 });

@@ -38,7 +38,11 @@ export default StyleSheet.create({
         borderRadius: 12,
         elevation: 5,
         shadowRadius: 12,
-        fontFamily: 'OpenSans-Semibold'
+        fontFamily: 'OpenSans-Semibold',
+        shadowColor: colors.primary,
+        shadowOffset: { width: 1, height: 3 },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
     },
     container: {
         flex: 1,

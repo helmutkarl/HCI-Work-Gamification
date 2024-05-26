@@ -18,13 +18,20 @@ export default StyleSheet.create({
         paddingHorizontal: 18,
         paddingVertical: 5,
         borderRadius: 15,
-        elevation: 5,
-        shadowRadius: 12,
-        overflow: "hidden",
         backgroundColor: colors.accent_green,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: "center",
+        
+        
+        shadowColor: colors.primary,
+        shadowOffset: { width: 1, height: 3 },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+
+        // Elevation property for Android
+        elevation: 5,
+    
     },
 
     tagsSelected: {
@@ -32,13 +39,18 @@ export default StyleSheet.create({
         paddingHorizontal: 18,
         paddingVertical: 5,
         borderRadius: 15,
-        elevation: 5,
-        shadowRadius: 12,
-        overflow: "hidden",
         backgroundColor: colors.primary,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: "center",
+
+        shadowColor: colors.primary,
+        shadowOffset: { width: 1, height: 3 },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+
+        // Elevation property for Android
+        elevation: 5,
     },
 
     tagsText: {

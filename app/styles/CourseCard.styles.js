@@ -11,8 +11,11 @@ export default StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'left',
         borderRadius: 12,
-        elevation: 5,
-        shadowRadius: 12,
+        elevation: 5, //for Android
+        shadowColor: colors.primary,
+        shadowOffset: { width: 1, height: 3 },
+        shadowOpacity: 0.25,
+        shadowRadius: 4, //for iOS
     },
     courseType: {
         color: colors.secondary,
@@ -68,17 +71,19 @@ export default StyleSheet.create({
     },
     statusTags: {
         marginTop: 2,
-        marginLeft: 185,
+        marginLeft: 190,
         paddingHorizontal: 8,
         paddingVertical: 3,
         borderRadius: 15,
-        elevation: 5,
-        shadowRadius: 12,
-        overflow: "hidden",
         backgroundColor: '#EAF8BF',
         alignItems: 'right',
         justifyContent: "right",
         marginBottom: -10,
+        shadowColor: colors.primary,
+        shadowOffset: { width: 1, height: 3 },
+        shadowOpacity: 0.25,
+        shadowRadius: 2,
+        elevation: 2,
     },
     statusTagsText: {
         color: '#27476E',

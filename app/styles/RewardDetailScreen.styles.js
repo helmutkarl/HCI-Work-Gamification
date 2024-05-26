@@ -43,13 +43,15 @@ export default StyleSheet.create({
         paddingHorizontal: 18,
         paddingVertical: 5,
         borderRadius: 15,
-        elevation: 5,
-        shadowRadius: 12,
-        overflow: "hidden",
         backgroundColor: '#f8f7d8',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: "center",
+        elevation: 5, //for Android
+        shadowColor: colors.primary,
+        shadowOffset: { width: 1, height: 3 },
+        shadowOpacity: 0.25,
+        shadowRadius: 4, //for iOS
     },
 
     tagsText: {

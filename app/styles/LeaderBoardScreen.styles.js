@@ -36,8 +36,11 @@ export default StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'left',
         borderRadius: 12,
-        elevation: 5,
-        shadowRadius: 12,
+        elevation: 5, //for Android
+        shadowColor: colors.primary,
+        shadowOffset: { width: 1, height: 3 },
+        shadowOpacity: 0.25,
+        shadowRadius: 4, //for iOS
     },
 
     courseTextContainer: {
