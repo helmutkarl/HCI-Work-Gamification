@@ -75,6 +75,11 @@ export default StyleSheet.create({
         fontSize: 14,
         fontFamily: 'OpenSans-Semibold'
     },
+    tagsText3: {
+        color: "red",
+        fontSize: 14,
+        fontFamily: 'OpenSans-Semibold'
+    },
     titleText: {
         color: colors.titles,
         fontSize: 32,
@@ -94,6 +99,7 @@ export default StyleSheet.create({
         fontSize: 16,
         marginLeft: 8,
         marginTop: 25,
+        marginBottom: 25,
         fontFamily: 'OpenSans-Regular'
     },
     descriptionTitle: {
@@ -128,5 +134,10 @@ export default StyleSheet.create({
         width: 250,
         marginLeft: 8,
         position: "absolute",
+    },
+    percentagContainer: {
+        position: "absolute",
+        right: 20,
+        top: 40,
     }
 });

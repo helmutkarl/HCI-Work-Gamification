@@ -24,6 +24,12 @@ export default StyleSheet.create({
         marginBottom: 13,
         fontFamily: 'OpenSans-Semibold'
     },
+    percentageText: {
+        color: colors.titles,
+        fontSize: 14,
+        left: 8,
+        fontFamily: 'OpenSans-Light'
+    },
     courseTitle: {
         color: colors.titles,
         fontSize: 16,
@@ -42,19 +48,13 @@ export default StyleSheet.create({
         height: 100,
         width: 100
     },
-    progressLineContainer: {
-        borderTopWidth: 3,
-        marginTop: 28,
-        width: 230,
-        marginLeft: 8,
-    },
     progressLine: {
         opacity: 0.3,
         height: 3,
         borderTopWidth: 3,
         borderColor: '#27476E',
         borderStyle: "solid",
-        width: 220,
+        width: "95%",
         marginLeft: 8,
         position: "absolute",
     },
@@ -63,7 +63,7 @@ export default StyleSheet.create({
         borderTopWidth: 3,
         borderColor: '#27476E',
         borderStyle: "solid",
-        width: 150,
+        width: "70%",
         marginLeft: 8,
         position: "absolute",
     },
@@ -72,11 +72,12 @@ export default StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'center',
         flex: 1
-    },
+    }, 
     statusTags: {
         marginTop: 2,
+        marginHorizontal: 3,
         paddingHorizontal: 8,
-        paddingVertical: 3,
+        paddingVertical: 2,
         borderRadius: 15,
         backgroundColor: '#EAF8BF',
         marginBottom: -10,
@@ -92,8 +93,29 @@ export default StyleSheet.create({
         fontSize: 10,
         fontFamily: 'OpenSans-Semibold'
     },
+    statusTagsText2: {
+        color: 'red',
+        fontSize: 10,
+        fontFamily: 'OpenSans-Semibold'
+    },
     textContainer: {
         width: '72%',
         flexDirection: 'column'
-    }
+    },
+    percentagContainer: {
+        position: "absolute",
+        right: 10,
+    },
+    popularContainer: {
+        position: "absolute",
+        right: -5,
+        top: -90,
+        overflow: 'visible',
+    },
+    pickedContainer: {
+        position: "absolute",
+        right: -5,
+        top: -65,
+        overflow: 'visible',
+    },
 });

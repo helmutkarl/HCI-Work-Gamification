@@ -65,6 +65,8 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                             type: course.type,
                             category: course.category,
                             subtitle: course.subtitle,
+                            target_group: course.target_group,
+                            training_objectives: course.training_objectives,
                             description: course.description,
                             status: course.status || 'Not Enrolled',
                         })}

@@ -52,7 +52,7 @@ export default ProfileScreen = ({ navigation }) => {
                         <View style={styles.settingsContainer} />
                         <MenuOption value="Normal" disabled={true} text='Account Information' />
                         <MenuOption value="N/A" disabled={true} text='Notifications' />
-                        <MenuOption value="Back to Login" text='Logout' />
+                        <MenuOption value="Back to Login" text='Sign out' />
                     </MenuOptions>
                 </Menu>
 
@@ -83,19 +83,25 @@ export default ProfileScreen = ({ navigation }) => {
                                 ...course,
                                 image: course.image,
                                 status: courseProfile.status,
+                                mandatory: course.mandatory,
                                 title: course.title,
                                 type: course.type,
                                 category: course.category,
                                 subtitle: course.subtitle,
+                                target_group: course.target_group,
+                                training_objectives: course.training_objectives,
                                 description: course.description,
                             }}
                             onPress={() => navigation.navigate('CourseDetailScreen', {
                                 status: courseProfile.status,
+                                mandatory: course.mandatory,
                                 image: course.image,
                                 title: course.title,
                                 type: course.type,
                                 category: course.category,
                                 subtitle: course.subtitle,
+                                target_group: course.target_group,
+                                training_objectives: course.training_objectives,
                                 description: course.description,
                                 id: course.id,
                             })}

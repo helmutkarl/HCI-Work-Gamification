@@ -9,7 +9,7 @@ import { useAuth } from '../components/AuthContext.js';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default CourseDetailScreen = ({ route }) => {
-    const { image, title, type, category, subtitle, description, status: initialStatus, id } = route.params || {};
+    const { image, title, type, category, subtitle, target_group, mandatory, training_objectives, description, status: initialStatus, id } = route.params || {};
     const { user, setUser } = useAuth();
     const [status, setStatus] = useState(initialStatus);
 
@@ -52,7 +52,11 @@ export default CourseDetailScreen = ({ route }) => {
                 <View style={styles.imageContainer}>
                     <Image source={{ uri: image }} style={{ width: 250, height: 250, marginBottom: 20, }} />
                 </View>
-                <View style={styles.tagContainer}>
+                <ScrollView            
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    scrollEnabled={true}>
+                                   <View style={styles.tagContainer}>
                     <View style={styles.tags}>
                         <Text style={styles.tagsText}>{type}</Text>
                     </View>
@@ -64,17 +68,31 @@ export default CourseDetailScreen = ({ route }) => {
                             <Text style={styles.tagsText2}>{status}</Text>
                         </View>
                     )}
-                </View>
-
+                    {mandatory == true &&
+                        <View style={styles.tags2}>
+                        <Text style={styles.tagsText3}>Mandatory</Text>
+                    </View>
+                    }
+                </View>         
+                </ScrollView>
                 <View style={styles.titleContainer}>
                     <Text style={styles.titleText}>{title}</Text>
                     <Text style={styles.subTitleText}>{subtitle}</Text>
+                    {status === "In Progress" &&
+                        <View style={styles.percentagContainer}>
+                               <Text style={styles.subTitleText}>75%</Text>
+                        </View>
+                    }
                     {status === "In Progress" &&
                         <View>
                             <View style={styles.progressLine} />
                             <View style={styles.progressLineFull} />
                         </View>
                     }
+                    <Text style={styles.descriptionTitle}>Target Group</Text>
+                    <Text style={styles.descriptionText}>{target_group}</Text>
+                    <Text style={styles.descriptionTitle}>Training Objectives</Text>
+                    <Text style={styles.descriptionText}>{training_objectives}</Text>
                     <Text style={styles.descriptionTitle}>Course Description</Text>
                     <Text style={styles.descriptionText}>{description}</Text>
                 </View>
