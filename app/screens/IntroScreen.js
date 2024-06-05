@@ -15,7 +15,7 @@ const slides = [
     {
         key: 'two',
         icon: require('../assets/icons/menu_trophy_empty.png'),
-        text: 'Collect XPs and make it to the top of the leaderboard!'
+        text: 'Collect Experience Points (XPs) and make it to the top of the leaderboard!'
     },
     {
         key: 'three',
