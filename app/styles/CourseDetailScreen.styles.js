@@ -139,5 +139,15 @@ export default StyleSheet.create({
         position: "absolute",
         right: 20,
         top: 40,
-    }
+    },
+    dropText: {
+        color: colors.text,
+        fontSize: 18,
+        marginLeft: 8,
+        marginTop: -40,
+        fontFamily: 'OpenSans-Light',
+        textDecorationLine: 'underline',
+        paddingBottom: 100,
+        alignSelf: "center",
+    },
 });

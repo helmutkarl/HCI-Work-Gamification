@@ -12,6 +12,7 @@ export default CourseDetailScreen = ({ route }) => {
     const { image, title, type, category, subtitle, target_group, mandatory, training_objectives, description, status: initialStatus, id } = route.params || {};
     const { user, setUser } = useAuth();
     const [status, setStatus] = useState(initialStatus);
+    const {course, setCourse } = useAuth();
 
     // Checking if the user is enrolled in the course
     useEffect(() => {
@@ -32,6 +33,7 @@ export default CourseDetailScreen = ({ route }) => {
                     courses: [...user.courses, { id, status: 'Enrolled' }]
                 };
                 setUser(updatedUser);
+                setStatus('Enrolled');
                 try {
                     await AsyncStorage.setItem('user', JSON.stringify(updatedUser));
                     Alert.alert("Success", "You have successfully enrolled in this course!");
@@ -43,6 +45,26 @@ export default CourseDetailScreen = ({ route }) => {
             Alert.alert("Error", "Could not enroll in this course.");
         }
     };
+
+    const dropCourse = async () => {
+        if (user) {
+            const updatedCourses = user.courses.filter(course => course.id !== id);
+    
+            const updatedUser = { ...user, courses: updatedCourses };
+            setUser(updatedUser);
+            setStatus('Not Enrolled'); // Set status to the initial state or default value
+    
+            try {
+                await AsyncStorage.setItem('user', JSON.stringify(updatedUser));
+                Alert.alert("Success", "You have successfully dropped the registration for this course.");
+            } catch (error) {
+                console.log(error);
+            }
+        } else {
+            Alert.alert("Error", "Could not drop the registration for this course.");
+        }
+    };
+    
 
     return (
         <ImageBackground
@@ -102,23 +124,32 @@ export default CourseDetailScreen = ({ route }) => {
                     courseId={id}
                     onPress={() => enrollCourse()} />
                 <View style={{ height: 64 }}></View>
+                <View>
+                    {status === "Enrolled"  && mandatory  === false &&
+                        <View>
+                            <Text style={styles.dropText} onPress={() => dropCourse()}>DROP REGISTRATION</Text>
+                        </View>
+                    }
+                </View>
+
             </ScrollView>
         </ImageBackground>
     );
 }
 
-const CtaButton = ({ status, user, courseId, onPress }) => {
+const CtaButton = ({ status, onPress }) => {
     let buttonText;
     let textColor;
-
-    const courseExists = user && user.courses.some(course => course.id === courseId);
 
     // Determining button text and text color based on status
     if (status === 'Completed') {
         buttonText = 'Completed';
         textColor = colors.titles;
-    } else if (courseExists) {
+    } else if (status === 'In Progress') {
         buttonText = 'Continue training';
+        textColor = colors.white;
+    } else if (status === 'Enrolled'){
+        buttonText = 'Start training';
         textColor = colors.white;
     } else {
         buttonText = 'Enroll';

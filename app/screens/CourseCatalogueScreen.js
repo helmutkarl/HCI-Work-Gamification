@@ -53,7 +53,7 @@ export default CourseCatalogueScreen = ({ navigation }) => {
                     <CategoryFilters onPress={handleCoursesFilter} courses={coursesData} />
                 </View>
                 {filteredCourses
-                .filter(course => !course.status || course.status === 'Not Enrolled')
+                .filter(course => course.status === 'Not Enrolled')
                 .map((course, index) => (
                     <CourseCard
                         key={index}

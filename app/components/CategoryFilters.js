@@ -6,7 +6,7 @@ import styles from '../styles/Filters.styles';
 export default CategoryFilters = ({ onPress, courses }) => {
 
     const [selectedTag, setSelectedTag] = useState("All");
-    const [filteredCount, setFilteredCount] = useState(courses.length);
+    const [filteredCount, setFilteredCount] = useState('8');
 
     const tags = ["All", "IT", "Management", "Design", "Soft Skills", "Languages", "Safety"];
 

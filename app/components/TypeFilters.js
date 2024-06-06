@@ -7,7 +7,7 @@ import styles from '../styles/Filters.styles';
 export default TypeFilters = ({ onPress, courses }) => {
 
     const [selectedTag, setSelectedTag] = useState("All");
-    const [filteredCount, setFilteredCount] = useState(courses.length);
+    const [filteredCount, setFilteredCount] = useState('8');
 
     const tags = ["All", "Online Classroom", "e-Learning", "In person"];
 

@@ -34,7 +34,7 @@ export default CourseCard = ({ course, onPress }) => {
                 }
                 <Text style={styles.courseTitle}>{course.title}</Text>
                 <Text style={styles.courseSubTitle}>{course.subtitle}</Text>
-                {course.status && 
+                {course.status != 'Not Enrolled' && 
                     <View style={styles.statusTagsContainer}>
                                         {course.mandatory == true &&
                     <View style={styles.statusTags}>
