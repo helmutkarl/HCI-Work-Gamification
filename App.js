@@ -16,8 +16,6 @@ let customFonts = {
   'OpenSans-Light': require('./app/assets/fonts/Open_Sans/OpenSans-Light.ttf'),
 };
 
-
-
 export default class App extends React.Component {
   state = {
     fontsLoaded: false,

@@ -12,7 +12,7 @@ export default CourseDetailScreen = ({ route }) => {
     const { image, title, type, category, subtitle, target_group, mandatory, training_objectives, description, status: initialStatus, id } = route.params || {};
     const { user, setUser } = useAuth();
     const [status, setStatus] = useState(initialStatus);
-    const {course, setCourse } = useAuth();
+    const { course, setCourse } = useAuth();
 
     // Checking if the user is enrolled in the course
     useEffect(() => {
@@ -30,7 +30,7 @@ export default CourseDetailScreen = ({ route }) => {
             if (!courseExists) {
                 const updatedUser = {
                     ...user,
-                    courses: [...user.courses, { id, status: 'Enrolled' }]
+                    courses: [{ id, status: 'Enrolled' }, ...user.courses]
                 };
                 setUser(updatedUser);
                 setStatus('Enrolled');
@@ -49,11 +49,10 @@ export default CourseDetailScreen = ({ route }) => {
     const dropCourse = async () => {
         if (user) {
             const updatedCourses = user.courses.filter(course => course.id !== id);
-    
+
             const updatedUser = { ...user, courses: updatedCourses };
             setUser(updatedUser);
-            setStatus('Not Enrolled'); // Set status to the initial state or default value
-    
+            setStatus('Not Enrolled');
             try {
                 await AsyncStorage.setItem('user', JSON.stringify(updatedUser));
                 Alert.alert("Success", "You have successfully dropped the registration for this course.");
@@ -64,7 +63,7 @@ export default CourseDetailScreen = ({ route }) => {
             Alert.alert("Error", "Could not drop the registration for this course.");
         }
     };
-    
+
 
     return (
         <ImageBackground
@@ -77,35 +76,35 @@ export default CourseDetailScreen = ({ route }) => {
                 <View style={styles.imageContainer}>
                     <Image source={{ uri: image }} style={{ width: 250, height: 250, marginBottom: 20, }} />
                 </View>
-                <ScrollView            
+                <ScrollView
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
                     scrollEnabled={true}>
-                                   <View style={styles.tagContainer}>
-                    <View style={styles.tags}>
-                        <Text style={styles.tagsText}>{type}</Text>
-                    </View>
-                    <View style={styles.tags}>
-                        <Text style={styles.tagsText}>{category}</Text>
-                    </View>
-                    {status && (
-                        <View style={styles.tags2}>
-                            <Text style={styles.tagsText2}>{status}</Text>
+                    <View style={styles.tagContainer}>
+                        <View style={styles.tags}>
+                            <Text style={styles.tagsText}>{type}</Text>
                         </View>
-                    )}
-                    {mandatory == true &&
-                        <View style={styles.tags2}>
-                        <Text style={styles.tagsText3}>Mandatory</Text>
+                        <View style={styles.tags}>
+                            <Text style={styles.tagsText}>{category}</Text>
+                        </View>
+                        {status && (
+                            <View style={styles.tags2}>
+                                <Text style={styles.tagsText2}>{status}</Text>
+                            </View>
+                        )}
+                        {mandatory == true &&
+                            <View style={styles.tags2}>
+                                <Text style={styles.tagsText3}>Mandatory</Text>
+                            </View>
+                        }
                     </View>
-                    }
-                </View>         
                 </ScrollView>
                 <View style={styles.titleContainer}>
                     <Text style={styles.titleText}>{title}</Text>
                     <Text style={styles.subTitleText}>{subtitle}</Text>
                     {status === "In Progress" &&
                         <View style={styles.percentagContainer}>
-                               <Text style={styles.subTitleText}>75%</Text>
+                            <Text style={styles.subTitleText}>75%</Text>
                         </View>
                     }
                     {status === "In Progress" &&
@@ -128,7 +127,7 @@ export default CourseDetailScreen = ({ route }) => {
                     onPress={() => enrollCourse()} />
                 <View style={{ height: 64 }}></View>
                 <View>
-                    {status === "Enrolled"  && mandatory  === false &&
+                    {status === "Enrolled" && mandatory === false &&
                         <View>
                             <Text style={styles.dropText} onPress={() => dropCourse()}>DROP REGISTRATION</Text>
                         </View>
@@ -151,7 +150,7 @@ const CtaButton = ({ status, onPress }) => {
     } else if (status === 'In Progress') {
         buttonText = 'Continue training';
         textColor = colors.white;
-    } else if (status === 'Enrolled'){
+    } else if (status === 'Enrolled') {
         buttonText = 'Start training';
         textColor = colors.white;
     } else {
