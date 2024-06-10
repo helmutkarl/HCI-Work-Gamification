@@ -71,6 +71,9 @@ export default CourseDetailScreen = ({ route }) => {
             source={background}
             style={styles.backgroundContainer}>
             <ScrollView style={global.scrollView} showsVerticalScrollIndicator={false}>
+                <TouchableOpacity style={styles.bookmarkContainer}>
+                <Image source={require('../assets/icons/bookmark.png')} style={{ width:25,}}resizeMode='contain'/>
+                </TouchableOpacity>
                 <View style={styles.imageContainer}>
                     <Image source={{ uri: image }} style={{ width: 250, height: 250, marginBottom: 20, }} />
                 </View>

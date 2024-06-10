@@ -14,6 +14,13 @@ export default StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
     },
+    bookmarkContainer: {
+        paddingTop: 35,
+        paddingHorizontal: 10,
+        alignItems: 'right',
+        position: "absolute",
+        right: 20,
+    },
     ctaContainer: {
         marginTop: 25,
         alignItems: 'center',
